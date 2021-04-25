@@ -1,5 +1,6 @@
 import * as React from "react";
 import LeftSidebar from "./LeftSidebar/LeftSidebar";
+import Repositories from "./Repositories/Repositories";
 
 const Main = () => {
   return (
@@ -13,6 +14,10 @@ const Main = () => {
             <p class="f4 mb-4 text-gray">
               Estoy creando esta página en mis tiempos libres :)
             </p>
+          </div>
+
+          <div className="container no-padding" style={{ width: "auto" }}>
+            <Repositories />
           </div>
         </div>
       </div>
