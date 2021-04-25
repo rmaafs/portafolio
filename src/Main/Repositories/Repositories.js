@@ -1,7 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import RepoComponent from "./RepoComponent/RepoComponent";
 
+export function useFirstRender() {
+  const firstRender = useRef(true);
+  useEffect(() => {
+    firstRender.current = false;
+  }, []);
+  return firstRender.current;
+}
+
 const Repositories = () => {
+  const firstRender = useFirstRender();
   const [repos, setRepos] = useState([]);
 
   let showThisRepos = [
@@ -14,39 +23,51 @@ const Repositories = () => {
   ];
 
   useEffect(() => {
-    return () => {
-      fetch("https://api.github.com/users/rmaafs/repos")
-        .then((response) => response.json())
-        .then((jsonData) => {
-          //jsonData is parsed json object received from urlssss
-          console.log(jsonData);
+    if (firstRender) {
+      fetchRepos();
+    }
+  }, [firstRender]);
 
-          //Filtramos para que únicamente estén los que queremos mostrar
-          setRepos(jsonData.filter((repo) => showThisRepos.includes(repo.id)));
-        })
-        .catch((error) => {
-          console.error(error);
-        });
-    };
-  }, []);
+  const fetchRepos = () => {
+    fetch("https://api.github.com/users/rmaafs/repos")
+      .then((response) => response.json())
+      .then((jsonData) => {
+        //jsonData is parsed json object received from urlssss
+        console.log(jsonData);
+
+        //Filtramos para que únicamente estén los que queremos mostrar
+        setRepos(jsonData.filter((repo) => showThisRepos.includes(repo.id)));
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
 
   return (
     <div className="col-md-12">
-      <span className="text-muted" style={{ color: "#AEB7C0" }}>
-        Algunos de mis repositorios en{" "}
-        <a href="https://github.com/rmaafs" rel="noreferrer" target="_blank">
-          GitHub
-        </a>
-        <br />
-      </span>
+      {repos.length > 0 ? (
+        <span className="text-muted" style={{ color: "#AEB7C0" }}>
+          Algunos de mis repositorios en{" "}
+          <a href="https://github.com/rmaafs" rel="noreferrer" target="_blank">
+            GitHub
+          </a>
+          <br />
+        </span>
+      ) : (
+        ""
+      )}
 
       <div className="col-md-12">
         <div className="row">
-          {repos.length > 0
-            ? repos.map((repo, i) => {
-                return [<RepoComponent key={i} repo={repo} />];
-              })
-            : "No se encontraron repositorios."}
+          {repos.length > 0 ? (
+            repos.map((repo, i) => {
+              return [<RepoComponent key={i} repo={repo} />];
+            })
+          ) : (
+            <span style={{ paddingLeft: 16 }}>
+              No se encontraron repositorios.
+            </span>
+          )}
         </div>
       </div>
     </div>
