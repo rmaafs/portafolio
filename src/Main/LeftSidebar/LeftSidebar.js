@@ -6,6 +6,7 @@ const LeftSidebar = () => {
     <React.Fragment>
       <div className="flex-self-stretch border-md-right border-gray-light bg-white col-md-5 col-lg-4 col-xl-3 px-4 px-md-6 px-lg-7 py-6">
         <img
+          alt="Rodrigo Maafs Atilano"
           src="https://avatars.githubusercontent.com/u/47652130?s=460&amp;u=e14efd0723cc525183525917bb108188e2cc1bde&amp;v=4"
           className="circle mb-3"
           style={{ maxWidth: 150 }}

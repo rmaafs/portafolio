@@ -16,7 +16,7 @@ const ContactComponent = (props) => {
 };
 
 function getIcon(type) {
-  if (type == "github") {
+  if (type === "github") {
     return (
       <svg
         height="20"
@@ -34,7 +34,7 @@ function getIcon(type) {
         ></path>
       </svg>
     );
-  } else if (type == "email") {
+  } else if (type === "email") {
     return (
       <svg
         height="20"
@@ -52,7 +52,7 @@ function getIcon(type) {
         ></path>
       </svg>
     );
-  } else if (type == "map") {
+  } else if (type === "map") {
     return (
       <svg
         height="20"
