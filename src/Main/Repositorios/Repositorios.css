@@ -1,0 +1,19 @@
+.repositorios .numbered-heading {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.repositorios .numbered-heading::after {
+  content: "";
+  display: block;
+  position: relative;
+  top: 2px;
+  width: 100%;
+  height: 1px;
+  margin-left: 20px;
+  background-color: #d100ff;
+}
