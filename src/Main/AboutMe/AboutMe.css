@@ -1,0 +1,56 @@
+h1 {
+  padding-top: 40px;
+  padding-left: 15px;
+  color: #ccd6f6;
+}
+
+span {
+  color: #ccd6f6;
+  text-align: center;
+}
+
+.numbered-heading::after {
+  content: "";
+  display: block;
+  position: relative;
+  top: -17px;
+  left: 154px;
+  width: 50%;
+  height: 1px;
+  margin-left: 20px;
+  background-color: #d100ff;
+}
+
+ul {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(140px, 200px));
+  padding: 0px;
+  margin: 20px 0px 0px;
+  overflow: hidden;
+  list-style: none;
+  text-align: left;
+}
+
+li {
+  position: relative;
+  margin-bottom: 10px;
+  padding-left: 20px;
+}
+
+li::before {
+  content: "▹";
+  position: absolute;
+  left: 0px;
+  color: #d100ff;
+}
+
+.img-container {
+  align-self: center !important;
+  text-align: center !important;
+}
+
+img {
+  width: 90%;
+  border-radius: 20px;
+  margin-top: 30px;
+}
