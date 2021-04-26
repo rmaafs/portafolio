@@ -15,7 +15,7 @@ const RepoComponent = (props) => {
             backgroundColor: "#0C1F38",
             border: "1px solid",
             borderColor: Colors.colors.primary_border,
-            borderRadius: 3,
+            borderRadius: 10,
             padding: 15,
           }}
         >
