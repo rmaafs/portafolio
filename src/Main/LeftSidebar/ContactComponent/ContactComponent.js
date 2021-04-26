@@ -10,7 +10,9 @@ const ContactComponent = (props) => {
           padding: 5,
         }}
       >
-        <a href={props.link}>{getIcon(props.type)}</a>
+        <a href={props.link} target="_blank" rel="noreferrer">
+          {getIcon(props.type)}
+        </a>
       </div>
     </Fragment>
   );
