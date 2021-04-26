@@ -1,3 +1,7 @@
+.aboutme {
+  padding-top: 100px;
+}
+
 h1 {
   padding-top: 40px;
   padding-left: 15px;
@@ -55,10 +59,13 @@ li::before {
 .img-container {
   align-self: center !important;
   text-align: center !important;
+  position: relative;
+  top: 45px;
 }
 
-img {
+.img-container img {
   width: 90%;
   border-radius: 20px;
   margin-top: 30px;
+  max-width: 630px;
 }

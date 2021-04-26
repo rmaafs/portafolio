@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, Fragment } from "react";
 import Colors from "../../Colors";
 import RepoComponent from "../Repositories/RepoComponent/RepoComponent";
 import "./Repositorios.css";
@@ -46,8 +46,8 @@ const Repositorios = () => {
   };
 
   return (
-    <div className="col-12 no-padding repositorios">
-      <div className="col-xs-12 col-md-6">
+    <Fragment>
+      <div className="col-xs-12 col-md-6 no-padding repositorios">
         <h1 className="numbered-heading">
           <span>Repositorios</span>
         </h1>
@@ -90,7 +90,7 @@ const Repositorios = () => {
           )}
         </div>
       </div>
-    </div>
+    </Fragment>
   );
 };
 
