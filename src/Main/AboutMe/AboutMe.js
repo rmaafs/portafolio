@@ -69,6 +69,9 @@ const AboutMe = () => {
                 <li>React Native</li>
                 <li>Angular</li>
                 <li>Python</li>
+                <li>PHP</li>
+                <li>Express</li>
+                <li>Kotlin</li>
               </ul>
             </span>
           </div>
