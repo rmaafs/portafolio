@@ -4,7 +4,7 @@ import yo_paisaje from "../../assets/yo_paisaje.png";
 
 const AboutMe = () => {
   return (
-    <div className="col-12">
+    <div className="col-12 aboutme">
       <div className="row">
         <div className="col-md-6 col-12">
           <h1 className="numbered-heading">

@@ -9,13 +9,21 @@ span {
   text-align: center;
 }
 
-.numbered-heading::after {
+.aboutme .numbered-heading {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.aboutme .numbered-heading::after {
   content: "";
   display: block;
   position: relative;
-  top: -17px;
-  left: 154px;
-  width: 50%;
+  top: 2px;
+  width: 100%;
   height: 1px;
   margin-left: 20px;
   background-color: #d100ff;
