@@ -1,15 +1,16 @@
 import React, { Fragment } from "react";
+import Colors from "../../../Colors";
 
 const ContactComponent = (props) => {
   return (
     <Fragment>
-      <div className="d-flex flex-items-center mb-3">
-        {getIcon(props.type)}
-        {props.link ? (
-          <a href={props.link}>{props.username}</a>
-        ) : (
-          props.username
-        )}
+      <div
+        className="d-flex flex-items-center mb-3"
+        style={{
+          padding: 5,
+        }}
+      >
+        <a href={props.link}>{getIcon(props.type)}</a>
       </div>
     </Fragment>
   );
@@ -21,7 +22,7 @@ function getIcon(type) {
       <svg
         height="20"
         className="octicon octicon-mark-github mr-2 v-align-middle"
-        fill="#24292e"
+        fill={Colors.colors.primary}
         aria-label="GitHub"
         viewBox="0 0 16 16"
         version="1.1"
@@ -39,7 +40,7 @@ function getIcon(type) {
       <svg
         height="20"
         class="octicon octicon-mail mr-2 v-align-middle"
-        fill="#24292e"
+        fill={Colors.colors.primary}
         aria-label="email"
         viewBox="0 0 14 16"
         version="1.1"
@@ -57,7 +58,7 @@ function getIcon(type) {
       <svg
         height="20"
         class="octicon octicon-location mr-2 v-align-middle"
-        fill="#24292e"
+        fill={Colors.colors.primary}
         aria-label="Location"
         viewBox="0 0 12 16"
         version="1.1"
@@ -71,7 +72,14 @@ function getIcon(type) {
       </svg>
     );
   } else {
-    return <i className={"fa fa-" + type + " fa-fw mr-2 v-align-middle"}></i>;
+    return (
+      <i
+        className={"fa fa-" + type + " fa-fw mr-2 v-align-middle"}
+        style={{
+          color: Colors.colors.primary,
+        }}
+      ></i>
+    );
   }
 }
 
