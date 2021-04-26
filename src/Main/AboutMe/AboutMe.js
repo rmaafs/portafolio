@@ -1,6 +1,7 @@
 import React from "react";
 import "./AboutMe.css";
 import yo_paisaje from "../../assets/yo_paisaje.png";
+import Colors from "../../Colors";
 
 const AboutMe = () => {
   return (
@@ -30,8 +31,18 @@ const AboutMe = () => {
             <span>
               Actualmente estudio el penúltimo semestre en la Benemérita
               Universidad Autónoma de Aguascalientes, y trabajando en una
-              empresa de desarrollo de Sistemas Web y aplicaciones móviles, Apps
-              Camelot.
+              empresa de desarrollo de Sistemas Web y aplicaciones móviles en{" "}
+              <a
+                href="https://appscamelot.com/"
+                target="_blank"
+                rel="noreferrer"
+                style={{
+                  color: Colors.colors.primary_span,
+                }}
+              >
+                Apps Camelot
+              </a>
+              .
             </span>
             <br />
             <br />
