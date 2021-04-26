@@ -29,9 +29,19 @@ const AboutMe = () => {
             <br />
             <br />
             <span>
-              Actualmente estudio el penúltimo semestre en la Benemérita
-              Universidad Autónoma de Aguascalientes, y trabajando en una
-              empresa de desarrollo de Sistemas Web y aplicaciones móviles en{" "}
+              Actualmente estudio el penúltimo semestre en la{" "}
+              <a
+                href="https://uaa.mx/"
+                target="_blank"
+                rel="noreferrer"
+                style={{
+                  color: Colors.colors.primary_span,
+                }}
+              >
+                Benemérita Universidad Autónoma de Aguascalientes
+              </a>
+              , y trabajando en una empresa de desarrollo de Sistemas Web y
+              aplicaciones móviles en{" "}
               <a
                 href="https://appscamelot.com/"
                 target="_blank"
