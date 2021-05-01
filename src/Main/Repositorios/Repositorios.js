@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef, Fragment } from "react";
 import Colors from "../../Colors";
 import RepoComponent from "../Repositories/RepoComponent/RepoComponent";
+import ScrollAnimation from "react-animate-on-scroll";
 import "./Repositorios.css";
 
 export function useFirstRender() {
@@ -46,7 +47,7 @@ const Repositorios = () => {
   };
 
   return (
-    <Fragment>
+    <ScrollAnimation animateIn="animate__fadeIn" offset={350}>
       <div className="col-xs-12 col-md-6 no-padding repositorios">
         <h1 className="numbered-heading">
           <span>Repositorios</span>
@@ -90,7 +91,7 @@ const Repositorios = () => {
           )}
         </div>
       </div>
-    </Fragment>
+    </ScrollAnimation>
   );
 };
 
