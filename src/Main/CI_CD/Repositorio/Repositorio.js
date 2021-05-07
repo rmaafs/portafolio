@@ -147,7 +147,7 @@ function timeSince(time) {
     token = "hace",
     list_choice = 1;
 
-  if (seconds == 0) {
+  if (seconds === 0) {
     return "Hace un instante";
   }
   if (seconds < 0) {
@@ -159,7 +159,7 @@ function timeSince(time) {
     format;
   while ((format = time_formats[i++]))
     if (seconds < format[0]) {
-      if (typeof format[2] == "string") return format[list_choice];
+      if (typeof format[2] === "string") return format[list_choice];
       else
         return token + " " + Math.floor(seconds / format[2]) + " " + format[1];
     }

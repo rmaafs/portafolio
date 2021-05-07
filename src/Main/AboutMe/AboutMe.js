@@ -78,7 +78,7 @@ const AboutMe = () => {
         </div>
 
         <div className="col-md-6 col-12 img-container">
-          <img src={yo_paisaje} />
+          <img src={yo_paisaje} alt="Yo en mi universidad" />
         </div>
       </div>
     </div>

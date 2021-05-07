@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Colors from "../../../Colors";
 import "./Tests.css";
 
 const Tests = () => {
@@ -149,7 +148,7 @@ function timeSince(start, end) {
   var seconds = (+end - start) / 1000,
     list_choice = 1;
 
-  if (seconds == 0) {
+  if (seconds === 0) {
     return "0s";
   }
   if (seconds < 0) {
@@ -160,7 +159,7 @@ function timeSince(start, end) {
     format;
   while ((format = time_formats[i++]))
     if (seconds < format[0]) {
-      if (typeof format[2] == "string") return format[list_choice];
+      if (typeof format[2] === "string") return format[list_choice];
       else return Math.floor(seconds / format[2]) + format[1];
     }
   return start;

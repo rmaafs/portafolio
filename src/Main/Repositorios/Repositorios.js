@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef, Fragment } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Colors from "../../Colors";
 import RepoComponent from "../Repositories/RepoComponent/RepoComponent";
 import ScrollAnimation from "react-animate-on-scroll";
@@ -16,35 +16,37 @@ const Repositorios = () => {
   const firstRender = useFirstRender();
   const [repos, setRepos] = useState([]);
 
-  let showThisRepos = [
-    348843782, //alert-port-scanner
-    319228785, //abecedarioSenas
-    352274008, //mpx-framework
-    339649900, //mapsflix
-    181842540, //Magalaxy
-    222047220, //Tienda
-  ];
-
   useEffect(() => {
     if (firstRender) {
+      let showThisRepos = [
+        348843782, //alert-port-scanner
+        319228785, //abecedarioSenas
+        352274008, //mpx-framework
+        339649900, //mapsflix
+        181842540, //Magalaxy
+        222047220, //Tienda
+      ];
+
+      const fetchRepos = () => {
+        fetch("https://api.github.com/users/rmaafs/repos")
+          .then((response) => response.json())
+          .then((jsonData) => {
+            //jsonData is parsed json object received from urlssss
+            console.log(jsonData);
+
+            //Filtramos para que únicamente estén los que queremos mostrar
+            setRepos(
+              jsonData.filter((repo) => showThisRepos.includes(repo.id))
+            );
+          })
+          .catch((error) => {
+            console.error(error);
+          });
+      };
+
       fetchRepos();
     }
   }, [firstRender]);
-
-  const fetchRepos = () => {
-    fetch("https://api.github.com/users/rmaafs/repos")
-      .then((response) => response.json())
-      .then((jsonData) => {
-        //jsonData is parsed json object received from urlssss
-        console.log(jsonData);
-
-        //Filtramos para que únicamente estén los que queremos mostrar
-        setRepos(jsonData.filter((repo) => showThisRepos.includes(repo.id)));
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-  };
 
   return (
     <ScrollAnimation animateIn="animate__fadeIn" offset={350}>

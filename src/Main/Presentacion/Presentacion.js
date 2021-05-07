@@ -1,6 +1,5 @@
 import React from "react";
 import ContactComponent from "../LeftSidebar/ContactComponent/ContactComponent";
-import Colors from "../../Colors";
 import "./Presentacion.css";
 
 const Presentacion = () => {
