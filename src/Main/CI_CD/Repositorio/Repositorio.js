@@ -22,8 +22,8 @@ const Repositorio = () => {
   }, []);
 
   return (
-    <div className="col-12 mt-8">
-      <span class="span-row">Desde el código:</span>
+    <div className="col-12 col-md-4 mt-8">
+      <span class="span-row">Desde el código...</span>
 
       <div className="col-12 ci-cd-repo mt-2">
         <svg
@@ -56,7 +56,7 @@ const Repositorio = () => {
           {commits.length > 0 ? (
             commits.map((commit, i) => {
               if (i >= 5) return true;
-              return [getCommit(commit)];
+              return [getCommit(commit, i)];
             })
           ) : (
             <span style={{ paddingLeft: 16 }}>No se encontraron commits.</span>
@@ -76,14 +76,14 @@ const Repositorio = () => {
   );
 };
 
-const getCommit = (commit) => {
+const getCommit = (commit, i) => {
   let autor = commit.author ? commit.commit.author.name : "Rodrigo Maafs";
   let imgProfile = commit.author
     ? commit.author.avatar_url
     : "https://avatars.githubusercontent.com/u/47652130?v=4";
 
   return (
-    <li className="text-commit">
+    <li key={i} className="text-commit">
       <a href={commit.html_url} target="_blank" rel="noreferrer">
         {refactorLenght(commit.commit.message)}
       </a>
