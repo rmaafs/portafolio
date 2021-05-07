@@ -23,7 +23,7 @@ const Repositorio = () => {
 
   return (
     <div className="col-12 col-md-4 mt-8">
-      <span class="span-row">Desde el código...</span>
+      <span className="span-row">Desde el código...</span>
 
       <div className="col-12 ci-cd-repo mt-2">
         <svg
