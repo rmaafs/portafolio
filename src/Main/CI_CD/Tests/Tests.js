@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import ScrollAnimation from "react-animate-on-scroll";
 import "./Tests.css";
 
 const Tests = () => {
@@ -37,100 +38,104 @@ const Tests = () => {
 
   return (
     <div className="col-12 col-md-4 mt-8">
-      <span className="span-row">Los tests (CI) en cada push...</span>
+      <ScrollAnimation animateIn="animate__fadeIn" offset={0}>
+        <span className="span-row">Los tests (CI) en cada push...</span>
 
-      <div className="col-12 ci-cd-tests mt-2">
-        {run.conclusion === "success" ? (
-          <svg
-            width="16"
-            height="16"
-            className="octicon octicon-check-circle-fill"
-            viewBox="0 0 16 16"
-            version="1.1"
-            aria-hidden="true"
-          >
-            <path
-              fillRule="evenodd"
-              fill="#2ea043"
-              d="M8 16A8 8 0 108 0a8 8 0 000 16zm3.78-9.72a.75.75 0 00-1.06-1.06L6.75 9.19 5.28 7.72a.75.75 0 00-1.06 1.06l2 2a.75.75 0 001.06 0l4.5-4.5z"
-            ></path>
-          </svg>
-        ) : (
-          <svg
-            width="16"
-            height="16"
-            className="octicon octicon-x-circle-fill"
-            viewBox="0 0 16 16"
-            version="1.1"
-            aria-hidden="true"
-          >
-            <path
-              fillRule="evenodd"
-              fill="#f85149"
-              d="M2.343 13.657A8 8 0 1113.657 2.343 8 8 0 012.343 13.657zM6.03 4.97a.75.75 0 00-1.06 1.06L6.94 8 4.97 9.97a.75.75 0 101.06 1.06L8 9.06l1.97 1.97a.75.75 0 101.06-1.06L9.06 8l1.97-1.97a.75.75 0 10-1.06-1.06L8 6.94 6.03 4.97z"
-            ></path>
-          </svg>
-        )}
-
-        <a href={run.html_url} target="_blank" rel="noreferrer">
-          {run.head_commit ? run.head_commit.message : "-"}
-        </a>
-
-        <ul>
-          {jobs.length > 0 ? (
-            jobs.map((job, i) => {
-              return [getJob(job, i)];
-            })
+        <div className="col-12 ci-cd-tests mt-2">
+          {run.conclusion === "success" ? (
+            <svg
+              width="16"
+              height="16"
+              className="octicon octicon-check-circle-fill"
+              viewBox="0 0 16 16"
+              version="1.1"
+              aria-hidden="true"
+            >
+              <path
+                fillRule="evenodd"
+                fill="#2ea043"
+                d="M8 16A8 8 0 108 0a8 8 0 000 16zm3.78-9.72a.75.75 0 00-1.06-1.06L6.75 9.19 5.28 7.72a.75.75 0 00-1.06 1.06l2 2a.75.75 0 001.06 0l4.5-4.5z"
+              ></path>
+            </svg>
           ) : (
-            <span style={{ paddingLeft: 16 }}>No se encontraron jobs.</span>
+            <svg
+              width="16"
+              height="16"
+              className="octicon octicon-x-circle-fill"
+              viewBox="0 0 16 16"
+              version="1.1"
+              aria-hidden="true"
+            >
+              <path
+                fillRule="evenodd"
+                fill="#f85149"
+                d="M2.343 13.657A8 8 0 1113.657 2.343 8 8 0 012.343 13.657zM6.03 4.97a.75.75 0 00-1.06 1.06L6.94 8 4.97 9.97a.75.75 0 101.06 1.06L8 9.06l1.97 1.97a.75.75 0 101.06-1.06L9.06 8l1.97-1.97a.75.75 0 10-1.06-1.06L8 6.94 6.03 4.97z"
+              ></path>
+            </svg>
           )}
-        </ul>
-      </div>
+
+          <a href={run.html_url} target="_blank" rel="noreferrer">
+            {run.head_commit ? run.head_commit.message : "-"}
+          </a>
+
+          <ul>
+            {jobs.length > 0 ? (
+              jobs.map((job, i) => {
+                return [getJob(job, i)];
+              })
+            ) : (
+              <span style={{ paddingLeft: 16 }}>No se encontraron jobs.</span>
+            )}
+          </ul>
+        </div>
+      </ScrollAnimation>
     </div>
   );
 };
 
 const getJob = (job, i) => {
   return (
-    <li key={i}>
-      {job.conclusion === "success" ? (
-        <svg
-          aria-label="1 / 1 checks OK"
-          className="octicon octicon-check"
-          viewBox="0 0 16 16"
-          version="1.1"
-          width="16"
-          height="16"
-          role="img"
-        >
-          <path
-            fillRule="evenodd"
-            fill="#2ea043"
-            d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"
-          ></path>
-        </svg>
-      ) : (
-        <svg
-          aria-label="0 / 1 checks OK"
-          className="octicon octicon-x"
-          viewBox="0 0 16 16"
-          version="1.1"
-          width="16"
-          height="16"
-          role="img"
-        >
-          <path
-            fillRule="evenodd"
-            fill="#f85149"
-            d="M3.72 3.72a.75.75 0 011.06 0L8 6.94l3.22-3.22a.75.75 0 111.06 1.06L9.06 8l3.22 3.22a.75.75 0 11-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 01-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 010-1.06z"
-          ></path>
-        </svg>
-      )}
-      {job.name + " · "}
-      <span className="job-time">
-        {timeSince(job.started_at, job.completed_at)}
-      </span>
-    </li>
+    <ScrollAnimation animateIn="animate__fadeIn" offset={0}>
+      <li key={i}>
+        {job.conclusion === "success" ? (
+          <svg
+            aria-label="1 / 1 checks OK"
+            className="octicon octicon-check"
+            viewBox="0 0 16 16"
+            version="1.1"
+            width="16"
+            height="16"
+            role="img"
+          >
+            <path
+              fillRule="evenodd"
+              fill="#2ea043"
+              d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"
+            ></path>
+          </svg>
+        ) : (
+          <svg
+            aria-label="0 / 1 checks OK"
+            className="octicon octicon-x"
+            viewBox="0 0 16 16"
+            version="1.1"
+            width="16"
+            height="16"
+            role="img"
+          >
+            <path
+              fillRule="evenodd"
+              fill="#f85149"
+              d="M3.72 3.72a.75.75 0 011.06 0L8 6.94l3.22-3.22a.75.75 0 111.06 1.06L9.06 8l3.22 3.22a.75.75 0 11-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 01-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 010-1.06z"
+            ></path>
+          </svg>
+        )}
+        {job.name + " · "}
+        <span className="job-time">
+          {timeSince(job.started_at, job.completed_at)}
+        </span>
+      </li>
+    </ScrollAnimation>
   );
 };
 
