@@ -1,6 +1,7 @@
 import React from "react";
 import ScrollAnimation from "react-animate-on-scroll";
 import "./CI_CD.css";
+import Deploy from "./Deploy/Deploy";
 import Repositorio from "./Repositorio/Repositorio";
 import Tests from "./Tests/Tests";
 
@@ -28,6 +29,8 @@ const CI_CD = () => {
           <Repositorio />
 
           <Tests />
+
+          <Deploy />
         </div>
       </div>
     </ScrollAnimation>
