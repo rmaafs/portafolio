@@ -1,0 +1,30 @@
+.ci-cd {
+  padding-top: 100px;
+}
+
+.ci-cd .numbered-heading {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.ci-cd .numbered-heading::after {
+  content: "";
+  display: block;
+  position: relative;
+  top: 2px;
+  width: 100%;
+  height: 1px;
+  margin-left: 20px;
+  background-color: #d100ff;
+}
+
+.span-row::before {
+  content: "▹";
+  position: absolute;
+  left: 0px;
+  color: #d100ff;
+}

@@ -15,6 +15,7 @@ import {
 } from "react-loadingg";
 import FadeIn from "react-fade-in";
 import Colors from "../Colors";
+import CI_CD from "./CI_CD/CI_CD";
 
 const Main = () => {
   const [loaded, setLoaded] = useState(false); //¿La página ha sido cargada?
@@ -59,6 +60,7 @@ const Main = () => {
           <Presentacion />
           <AboutMe />
           <Repositorios />
+          <CI_CD />
         </div>
       </FadeIn>
     </React.Fragment>
