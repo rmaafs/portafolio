@@ -26,7 +26,7 @@ const Deploy = () => {
 
   return (
     <div className="col-12 col-md-4 mt-8">
-      <span className="span-row">Y el deploy en mi servidor...</span>
+      <span className="span-row">Y el deploy (CD) en mi servidor...</span>
 
       <div className="col-12 ci-cd-deploy mt-2">
         {deploys.length > 0 ? (
