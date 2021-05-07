@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import ScrollAnimation from "react-animate-on-scroll";
 import Colors from "../../../Colors";
 import "./Deploy.css";
 
@@ -26,63 +27,69 @@ const Deploy = () => {
 
   return (
     <div className="col-12 col-md-4 mt-8">
-      <span className="span-row">Y el deploy (CD) en mi servidor...</span>
+      <ScrollAnimation animateIn="animate__fadeIn" offset={0}>
+        <span className="span-row">Y el deploy (CD) en mi servidor...</span>
 
-      <div className="col-12 ci-cd-deploy mt-2">
-        {deploys.length > 0 ? (
-          <a
-            href="https://github.com/rmaafs/portafolio/deployments/activity_log?environment=github-pages"
-            target="_blank"
-            rel="noreferrer"
-          >
-            {deploys[0].environment}
-          </a>
-        ) : (
-          "-"
-        )}
+        <div className="col-12 ci-cd-deploy mt-2">
+          {deploys.length > 0 ? (
+            <a
+              href="https://github.com/rmaafs/portafolio/deployments/activity_log?environment=github-pages"
+              target="_blank"
+              rel="noreferrer"
+            >
+              {deploys[0].environment}
+            </a>
+          ) : (
+            "-"
+          )}
 
-        <div>
-          <ul>
-            {deploys.length > 0 ? (
-              deploys.map((deploy, i) => {
-                if (i >= showXDeploys) return true;
-                return [getDeploy(deploy, i)];
-              })
-            ) : (
-              <span style={{ paddingLeft: 16 }}>
-                No se encontraron deploys.
-              </span>
-            )}
-          </ul>
+          <div>
+            <ul>
+              {deploys.length > 0 ? (
+                deploys.map((deploy, i) => {
+                  if (i >= showXDeploys) return true;
+                  return [getDeploy(deploy, i)];
+                })
+              ) : (
+                <span style={{ paddingLeft: 16 }}>
+                  No se encontraron deploys.
+                </span>
+              )}
+            </ul>
 
-          <a
-            className="more-commits"
-            href="https://github.com/rmaafs/portafolio/deployments/activity_log?environment=github-pages"
-            target="_blank"
-            rel="noreferrer"
-          >
-            y otros {deploys.length - showXDeploys} deploys más...
-          </a>
+            <ScrollAnimation animateIn="animate__fadeIn" offset={0}>
+              <a
+                className="more-commits"
+                href="https://github.com/rmaafs/portafolio/deployments/activity_log?environment=github-pages"
+                target="_blank"
+                rel="noreferrer"
+              >
+                y otros {deploys.length - showXDeploys} deploys más...
+              </a>
+            </ScrollAnimation>
+          </div>
         </div>
-      </div>
+      </ScrollAnimation>
     </div>
   );
 };
 
 const getDeploy = (deploy, i) => {
   return (
-    <li key={i} className="text-commit">
-      Deploy
-      <span
-        style={{
-          color: Colors.colors.primary_span,
-        }}
-      >
-        {" "}
-        #{deploy.id + " "}
-      </span>
-      {timeSince(deploy.created_at)}
-    </li>
+    <ScrollAnimation animateIn="animate__fadeIn" offset={0}>
+      <li key={i} className="text-commit">
+        Deploy
+        <span
+          style={{
+            color: Colors.colors.primary_span,
+          }}
+        >
+          {" "}
+          #{deploy.id + " "}
+        </span>
+        {timeSince(deploy.created_at)}
+      </li>
+    </ScrollAnimation>
   );
 };
 
