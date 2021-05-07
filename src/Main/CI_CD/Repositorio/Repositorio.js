@@ -11,7 +11,6 @@ const Repositorio = () => {
       fetch("https://api.github.com/repos/rmaafs/portafolio/commits")
         .then((response) => response.json())
         .then((jsonData) => {
-          console.log(jsonData);
           setCommits(jsonData);
         })
         .catch((error) => {

@@ -31,9 +31,6 @@ const Repositorios = () => {
         fetch("https://api.github.com/users/rmaafs/repos")
           .then((response) => response.json())
           .then((jsonData) => {
-            //jsonData is parsed json object received from urlssss
-            console.log(jsonData);
-
             //Filtramos para que únicamente estén los que queremos mostrar
             setRepos(
               jsonData.filter((repo) => showThisRepos.includes(repo.id))
