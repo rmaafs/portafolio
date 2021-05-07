@@ -75,7 +75,7 @@ const Tests = () => {
           )}
 
           <a href={run.html_url} target="_blank" rel="noreferrer">
-            {run.head_commit ? run.head_commit.message : "-"}
+            {run.head_commit ? refactorLenght(run.head_commit.message) : "-"}
           </a>
 
           <ul>
@@ -138,6 +138,14 @@ const getJob = (job, i) => {
     </ScrollAnimation>
   );
 };
+
+function refactorLenght(txt) {
+  let length = 28;
+  if (txt.length > length) {
+    return txt.substring(0, length) + "...";
+  }
+  return txt;
+}
 
 //Obtenemos el time lapse que duró el job
 function timeSince(start, end) {
