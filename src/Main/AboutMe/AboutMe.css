@@ -33,7 +33,7 @@ span {
   background-color: #d100ff;
 }
 
-ul {
+.aboutme ul {
   display: grid;
   grid-template-columns: repeat(3, minmax(140px, 200px));
   padding: 0px;
@@ -43,13 +43,13 @@ ul {
   text-align: left;
 }
 
-li {
+.aboutme li {
   position: relative;
   margin-bottom: 10px;
   padding-left: 20px;
 }
 
-li::before {
+.aboutme li::before {
   content: "▹";
   position: absolute;
   left: 0px;
