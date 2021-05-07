@@ -22,6 +22,10 @@
   background-color: #d100ff;
 }
 
+.span-row {
+  padding-left: 15px;
+}
+
 .span-row::before {
   content: "▹";
   position: absolute;

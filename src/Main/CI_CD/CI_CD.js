@@ -2,6 +2,7 @@ import React from "react";
 import ScrollAnimation from "react-animate-on-scroll";
 import "./CI_CD.css";
 import Repositorio from "./Repositorio/Repositorio";
+import Tests from "./Tests/Tests";
 
 const CI_CD = () => {
   return (
@@ -18,12 +19,16 @@ const CI_CD = () => {
           paddingTop: 20,
         }}
       >
-        <span>
+        <span style={{ width: "100%" }}>
           Me gusta la cultura DevOps, por lo que en este proyecto procuro
           aplicarla.
         </span>
 
-        <Repositorio />
+        <div className="col-12 row">
+          <Repositorio />
+
+          <Tests />
+        </div>
       </div>
     </ScrollAnimation>
   );
