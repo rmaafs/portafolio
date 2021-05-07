@@ -95,7 +95,7 @@ const Tests = () => {
 
 const getJob = (job, i) => {
   return (
-    <ScrollAnimation animateIn="animate__fadeIn" offset={0}>
+    <ScrollAnimation key={i} animateIn="animate__fadeIn" offset={0}>
       <li key={i}>
         {job.conclusion === "success" ? (
           <svg

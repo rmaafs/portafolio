@@ -76,7 +76,7 @@ const Deploy = () => {
 
 const getDeploy = (deploy, i) => {
   return (
-    <ScrollAnimation animateIn="animate__fadeIn" offset={0}>
+    <ScrollAnimation key={i} animateIn="animate__fadeIn" offset={0}>
       <li key={i} className="text-commit">
         Deploy
         <span

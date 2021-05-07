@@ -89,7 +89,7 @@ const getCommit = (commit, i) => {
     : "https://avatars.githubusercontent.com/u/47652130?v=4";
 
   return (
-    <ScrollAnimation animateIn="animate__fadeIn" offset={0}>
+    <ScrollAnimation key={i} animateIn="animate__fadeIn" offset={0}>
       <li key={i} className="text-commit">
         <a href={commit.html_url} target="_blank" rel="noreferrer">
           {refactorLenght(commit.commit.message)}
