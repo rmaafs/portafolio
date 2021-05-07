@@ -7,7 +7,7 @@ import Tests from "./Tests/Tests";
 
 const CI_CD = () => {
   return (
-    <ScrollAnimation animateIn="animate__fadeIn" offset={0}>
+    <ScrollAnimation animateIn="animate__fadeIn" offset={350}>
       <div className="col-xs-12 col-md-6 no-padding ci-cd">
         <h1 className="numbered-heading">
           <span>CI & CD</span>

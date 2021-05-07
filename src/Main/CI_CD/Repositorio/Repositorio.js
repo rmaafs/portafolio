@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import ScrollAnimation from "react-animate-on-scroll";
 import Colors from "../../../Colors";
 import "./Repositorio.css";
 
@@ -23,55 +24,61 @@ const Repositorio = () => {
 
   return (
     <div className="col-12 col-md-4 mt-8">
-      <span className="span-row">Desde el código...</span>
+      <ScrollAnimation animateIn="animate__fadeIn" offset={0}>
+        <span className="span-row">Desde el código...</span>
 
-      <div className="col-12 ci-cd-repo mt-2">
-        <svg
-          className="octicon octicon-repo mr-2 color-text-secondary flex-shrink-0"
-          height="20"
-          viewBox="0 0 16 16"
-          version="1.1"
-          width="20"
-          aria-hidden="true"
-        >
-          <path
-            fillRule="evenodd"
-            fill={Colors.colors.primary}
-            d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z"
-          ></path>
-        </svg>
-        <a href="https://github.com/rmaafs/" target="_blank" rel="noreferrer">
-          rmaafs
-        </a>
-        <span> / </span>
-        <a
-          href="https://github.com/rmaafs/portafolio"
-          target="_blank"
-          rel="noreferrer"
-        >
-          portafolio
-        </a>
+        <div className="col-12 ci-cd-repo mt-2">
+          <svg
+            className="octicon octicon-repo mr-2 color-text-secondary flex-shrink-0"
+            height="20"
+            viewBox="0 0 16 16"
+            version="1.1"
+            width="20"
+            aria-hidden="true"
+          >
+            <path
+              fillRule="evenodd"
+              fill={Colors.colors.primary}
+              d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z"
+            ></path>
+          </svg>
+          <a href="https://github.com/rmaafs/" target="_blank" rel="noreferrer">
+            rmaafs
+          </a>
+          <span> / </span>
+          <a
+            href="https://github.com/rmaafs/portafolio"
+            target="_blank"
+            rel="noreferrer"
+          >
+            portafolio
+          </a>
 
-        <ul>
-          {commits.length > 0 ? (
-            commits.map((commit, i) => {
-              if (i >= 5) return true;
-              return [getCommit(commit, i)];
-            })
-          ) : (
-            <span style={{ paddingLeft: 16 }}>No se encontraron commits.</span>
-          )}
-        </ul>
+          <ul>
+            {commits.length > 0 ? (
+              commits.map((commit, i) => {
+                if (i >= 5) return true;
+                return [getCommit(commit, i)];
+              })
+            ) : (
+              <span style={{ paddingLeft: 16 }}>
+                No se encontraron commits.
+              </span>
+            )}
+          </ul>
 
-        <a
-          className="more-commits"
-          href="https://github.com/rmaafs/portafolio/commits/master"
-          target="_blank"
-          rel="noreferrer"
-        >
-          y otros {commits.length - 5} commits más...
-        </a>
-      </div>
+          <ScrollAnimation animateIn="animate__fadeIn" offset={0}>
+            <a
+              className="more-commits"
+              href="https://github.com/rmaafs/portafolio/commits/master"
+              target="_blank"
+              rel="noreferrer"
+            >
+              y otros {commits.length - 5} commits más...
+            </a>
+          </ScrollAnimation>
+        </div>
+      </ScrollAnimation>
     </div>
   );
 };
@@ -83,25 +90,27 @@ const getCommit = (commit, i) => {
     : "https://avatars.githubusercontent.com/u/47652130?v=4";
 
   return (
-    <li key={i} className="text-commit">
-      <a href={commit.html_url} target="_blank" rel="noreferrer">
-        {refactorLenght(commit.commit.message)}
-      </a>
+    <ScrollAnimation animateIn="animate__fadeIn" offset={0}>
+      <li key={i} className="text-commit">
+        <a href={commit.html_url} target="_blank" rel="noreferrer">
+          {refactorLenght(commit.commit.message)}
+        </a>
 
-      <div className="commit-info">
-        <img
-          alt={autor}
-          src={imgProfile}
-          className="circle"
-          style={{ maxWidth: 20 }}
-        />
+        <div className="commit-info">
+          <img
+            alt={autor}
+            src={imgProfile}
+            className="circle"
+            style={{ maxWidth: 20 }}
+          />
 
-        <span className="commit-author">{commit.commit.author.name}</span>
-        <span className="commit-date">
-          {"· " + timeSince(commit.commit.author.date)}
-        </span>
-      </div>
-    </li>
+          <span className="commit-author">{commit.commit.author.name}</span>
+          <span className="commit-date">
+            {"· " + timeSince(commit.commit.author.date)}
+          </span>
+        </div>
+      </li>
+    </ScrollAnimation>
   );
 };
 
