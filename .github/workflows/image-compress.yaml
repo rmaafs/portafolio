@@ -20,6 +20,7 @@ jobs:
         uses: calibreapp/image-actions@main
         with:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
+          compressOnly: true
           jpegQuality: '80'
           jpegProgressive: false
           pngQuality: '80'
