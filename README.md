@@ -1,4 +1,5 @@
-# Portafolio
+# Portafolio ![CI/CD](https://github.com/rmaafs/portafolio/workflows/Build and Deploy/badge.svg)
+
 
 En este repositorio, crearé mi portafolio para ser mostrado en:<br>
 https://rmaafs.com <br>
