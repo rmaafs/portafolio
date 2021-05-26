@@ -18,8 +18,8 @@ const Footer = () => {
         Inspirado por{" "}
         <a href="https://github.com/bchiang7" taget="_blank">
           bchiang7
-        </a>
-        <br /> © Copyright {new Date().getFullYear()}
+        </a>{" "}
+        © Copyright {new Date().getFullYear()}
       </div>
     </div>
   );
