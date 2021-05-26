@@ -21,11 +21,11 @@ const CI_CD = () => {
         }}
       >
         <span style={{ width: "100%" }}>
-          Me gusta la cultura DevOps, por lo que en este proyecto procuro
-          aplicarla.
+          Me apasiona la cultura DevOps: hacer el trabajo difícil de forma
+          automatizada.
         </span>
 
-        <div className="col-12 row">
+        <div className="col-12 row" style={{ paddingTop: "40px" }}>
           <Repositorio />
 
           <Tests />

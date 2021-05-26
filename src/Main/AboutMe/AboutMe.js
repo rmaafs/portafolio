@@ -19,17 +19,14 @@ const AboutMe = () => {
             }}
           >
             <span>
-              ¡Hola! Soy Rodrigo, me gusta la tecnología, me encanta crear e
-              inovar cosas. Mis intereses son las nuevas tecnologías y
-              comunicarlas entre ellas para solucionar problemas. Me gusta
-              empezar desde el FrontEnd, hasta la cultura DevOps implementada en
-              mi propio servidor y encargarme de la seguridad. Me gusta aprender
-              cosas nuevas.
+              ¡Hola! Soy Rodrigo. Me gusta la tecnología en general. Desde el
+              FrontEnd, hasta la cultura DevOps y encargarme de la seguridad.
+              ¡Me gusta la inovación!
             </span>
             <br />
             <br />
             <span>
-              Actualmente estudio el penúltimo semestre en la{" "}
+              Estudio el penúltimo semestre en la{" "}
               <a
                 href="https://uaa.mx/"
                 target="_blank"
@@ -40,7 +37,7 @@ const AboutMe = () => {
               >
                 Benemérita Universidad Autónoma de Aguascalientes
               </a>
-              , y trabajando en una empresa de desarrollo de Sistemas Web y
+              , y trabajo en una empresa de desarrollo de Sistemas Web y
               aplicaciones móviles en{" "}
               <a
                 href="https://appscamelot.com/"
@@ -57,8 +54,7 @@ const AboutMe = () => {
             <br />
             <br />
             <span>
-              Actualmente estoy trabajando personal y profesionalmente en estas
-              tecnologías:
+              Actualmente trabajo personal y profesionalmente con:
               <ul>
                 <li>C++</li>
                 <li>Java</li>
