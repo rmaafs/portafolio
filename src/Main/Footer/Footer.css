@@ -1,0 +1,16 @@
+.footer {
+  margin-top: 150px;
+  height: 90px;
+  width: 100%;
+  color: #c6cdf0;
+  text-align: -webkit-center;
+  background-color: #020c1b;
+}
+
+.footer .text {
+  height: 90px;
+  width: 100%;
+
+  display: table-cell;
+  vertical-align: middle;
+}
