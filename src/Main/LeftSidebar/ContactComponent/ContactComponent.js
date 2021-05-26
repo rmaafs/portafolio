@@ -1,9 +1,10 @@
-import React, { Fragment } from "react";
+import React from "react";
 import Colors from "../../../Colors";
+import Tooltip from "@material-ui/core/Tooltip";
 
 const ContactComponent = (props) => {
   return (
-    <Fragment>
+    <Tooltip title={props.title} arrow>
       <div
         className="d-flex flex-items-center mb-3"
         style={{
@@ -14,7 +15,7 @@ const ContactComponent = (props) => {
           {getIcon(props.type)}
         </a>
       </div>
-    </Fragment>
+    </Tooltip>
   );
 };
 

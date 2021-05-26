@@ -25,27 +25,32 @@ const Presentacion = () => {
               <ContactComponent
                 type="github"
                 link="https://github.com/rmaafs"
-                username="rmaafs"
+                title="GitHub"
               />
               <ContactComponent
                 type="linkedin"
                 link="https://www.linkedin.com/in/rmaafs/"
-                username="/in/rmaafs"
+                title="Linkedin"
               />
               <ContactComponent
                 type="twitter"
                 link="https://twitter.com/royendero"
-                username="@royendero"
+                title="Twitter"
               />
               <ContactComponent
                 type="instagram"
                 link="https://instagram.com/relmaps"
-                username="@relmaps"
+                title="Instagram"
               />
               <ContactComponent
                 type="facebook"
                 link="https://www.facebook.com/ElMaps/"
-                username="@ElMaps"
+                title="Facebook"
+              />
+              <ContactComponent
+                type="email"
+                link="mailto:rodrigoelmaps@gmail.com"
+                title="Gmail"
               />
             </div>
           </div>
