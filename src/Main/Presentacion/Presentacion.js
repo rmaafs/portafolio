@@ -29,7 +29,7 @@ const Presentacion = () => {
               />
               <ContactComponent
                 type="linkedin"
-                link="https://github.com/rmaafs"
+                link="https://www.linkedin.com/in/rmaafs/"
                 username="/in/rmaafs"
               />
               <ContactComponent
