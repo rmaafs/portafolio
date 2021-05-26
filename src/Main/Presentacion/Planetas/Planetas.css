@@ -12,6 +12,7 @@
   border-radius: 100%;
   background-color: #45eeff;
   animation: orbit 10s linear infinite;
+  cursor: pointer;
 }
 
 /*Mars*/
@@ -24,6 +25,7 @@
   border-radius: 100%;
   background-color: #ff4e4e;
   animation: orbit3 15s linear infinite;
+  cursor: pointer;
 }
 
 /*Jupiter*/
@@ -36,6 +38,7 @@
   border-radius: 100%;
   background-color: #ff6a00;
   animation: orbit2 30s linear infinite;
+  cursor: pointer;
 }
 
 /*Luna*/
