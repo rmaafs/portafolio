@@ -9,7 +9,7 @@ const Presentacion = () => {
         <div className="col-12">
           <img
             alt="Rodrigo Maafs Atilano"
-            src="https://avatars.githubusercontent.com/u/47652130?s=460&amp;u=e14efd0723cc525183525917bb108188e2cc1bde&amp;v=4"
+            src="https://avatars.githubusercontent.com/u/47652130?s=300&amp;u=e14efd0723cc525183525917bb108188e2cc1bde&amp;v=4"
             className="circle mb-3"
             style={{ maxWidth: 150 }}
           />
