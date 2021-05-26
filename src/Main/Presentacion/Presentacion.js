@@ -1,5 +1,6 @@
 import React from "react";
 import ContactComponent from "../LeftSidebar/ContactComponent/ContactComponent";
+import Planetas from "./Planetas/Planetas";
 import "./Presentacion.css";
 
 const Presentacion = () => {
@@ -7,11 +8,7 @@ const Presentacion = () => {
     <div className="col-12 presentacion">
       <div className="row">
         <div className="col-12">
-          <div id="orbits">
-            <div className="orbit1"></div>
-            <div className="orbit2"></div>
-            <div className="orbit3"></div>
-          </div>
+          <Planetas />
 
           <img
             alt="Rodrigo Maafs Atilano"
@@ -21,7 +18,7 @@ const Presentacion = () => {
           />
         </div>
 
-        <div className="col-12">
+        <div className="col-12 mt-4">
           <span>Hola, soy Rodrigo Maafs Atilano</span>
           <br />
           <span>Estudiante de Ingeniería en Sistemas Computacionales</span>

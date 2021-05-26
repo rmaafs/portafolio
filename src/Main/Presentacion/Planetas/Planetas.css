@@ -1,0 +1,147 @@
+#orbits {
+  text-align: -webkit-center;
+}
+
+/*Hearth*/
+.hearth {
+  position: relative;
+  top: 105px;
+
+  height: 10px;
+  width: 10px;
+  border-radius: 100%;
+  background-color: #45eeff;
+  animation: orbit 10s linear infinite;
+}
+
+/*Mars*/
+.mars {
+  position: relative;
+  top: 95px;
+
+  height: 10px;
+  width: 10px;
+  border-radius: 100%;
+  background-color: #ff4e4e;
+  animation: orbit3 15s linear infinite;
+}
+
+/*Jupiter*/
+.jupiter {
+  position: relative;
+  top: 80px;
+
+  height: 15px;
+  width: 15px;
+  border-radius: 100%;
+  background-color: #ff6a00;
+  animation: orbit2 30s linear infinite;
+}
+
+/*Luna*/
+.luna1 {
+  position: relative;
+  top: 5px;
+
+  height: 3px;
+  width: 3px;
+  border-radius: 100%;
+  background-color: #a9a9a9;
+  animation: orbitGalilean 4s linear infinite;
+}
+
+/*Luna*/
+.luna2 {
+  position: relative;
+  top: 5px;
+
+  height: 3px;
+  width: 3px;
+  border-radius: 100%;
+  background-color: #a9a9a9;
+  animation: orbitGalilean 6s linear infinite;
+}
+
+/*Luna*/
+.luna3 {
+  position: relative;
+  top: 5px;
+
+  height: 3px;
+  width: 3px;
+  border-radius: 100%;
+  background-color: #a9a9a9;
+  animation: orbitGalilean 7s linear infinite;
+}
+
+/*Luna*/
+.luna4 {
+  position: relative;
+  top: 5px;
+
+  height: 3px;
+  width: 3px;
+  border-radius: 100%;
+  background-color: #a9a9a9;
+  animation: orbitGalilean 3s linear infinite;
+}
+
+/*Luna hearth*/
+.luna {
+  position: relative;
+  top: 5px;
+
+  height: 3px;
+  width: 3px;
+  border-radius: 100%;
+  background-color: #a9a9a9;
+  animation: orbitLunar 3s linear infinite;
+}
+
+/*Hearth*/
+@keyframes orbit {
+  from {
+    transform: translate(0%, -0%) rotate(0deg) translateX(75px);
+  }
+  to {
+    transform: translate(-0%, -0%) rotate(360deg) translateX(75px);
+  }
+}
+
+/*Jupiter*/
+@keyframes orbit2 {
+  from {
+    transform: translate(0%, -0%) rotate(0deg) translateX(110px);
+  }
+  to {
+    transform: translate(-0%, -0%) rotate(360deg) translateX(110px);
+  }
+}
+
+/*Mars*/
+@keyframes orbit3 {
+  from {
+    transform: translate(0%, -0%) rotate(0deg) translateX(90px);
+  }
+  to {
+    transform: translate(-0%, -0%) rotate(360deg) translateX(90px);
+  }
+}
+
+@keyframes orbitGalilean {
+  from {
+    transform: translate(0%, -0%) rotate(0deg) translateX(15px);
+  }
+  to {
+    transform: translate(-0%, -0%) rotate(360deg) translateX(15px);
+  }
+}
+
+@keyframes orbitLunar {
+  from {
+    transform: translate(0%, -0%) rotate(0deg) translateX(13px);
+  }
+  to {
+    transform: translate(-0%, -0%) rotate(360deg) translateX(13px);
+  }
+}
