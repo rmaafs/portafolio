@@ -7,11 +7,17 @@ const Presentacion = () => {
     <div className="col-12 presentacion">
       <div className="row">
         <div className="col-12">
+          <div id="orbits">
+            <div className="orbit1"></div>
+            <div className="orbit2"></div>
+            <div className="orbit3"></div>
+          </div>
+
           <img
             alt="Rodrigo Maafs Atilano"
             src="https://avatars.githubusercontent.com/u/47652130?s=300&amp;u=e14efd0723cc525183525917bb108188e2cc1bde&amp;v=4"
             className="circle mb-3"
-            style={{ maxWidth: 150 }}
+            style={{ maxWidth: 150, border: "2px solid #d100ff" }}
           />
         </div>
 
