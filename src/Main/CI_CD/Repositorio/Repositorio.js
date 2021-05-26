@@ -73,7 +73,7 @@ const Repositorio = () => {
               target="_blank"
               rel="noreferrer"
             >
-              y otros {commits.length - 5} commits más...
+              y otros commits más...
             </a>
           </ScrollAnimation>
         </div>

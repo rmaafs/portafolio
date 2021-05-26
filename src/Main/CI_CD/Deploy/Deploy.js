@@ -64,7 +64,7 @@ const Deploy = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                y otros {deploys.length - showXDeploys} deploys más...
+                y otros deploys más...
               </a>
             </ScrollAnimation>
           </div>
