@@ -19,7 +19,7 @@ const AboutMe = () => {
             }}
           >
             <span>
-              ¡Hola! Soy Rodrigo. Me gusta la tecnología en general. Desde el
+              ¡Hey! Soy Rodrigo. Me gusta la tecnología en general. Desde el
               FrontEnd, hasta la cultura DevOps y encargarme de la seguridad.
               <br />
               ¡Me gusta la inovación!
