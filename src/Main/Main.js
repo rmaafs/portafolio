@@ -58,9 +58,18 @@ const Main = () => {
           style={{ display: loaded ? "block" : "none" }}
         >
           <Presentacion />
-          <AboutMe />
-          <Repositorios />
-          <CI_CD />
+          <div
+            style={{
+              width: "100%",
+              textAlign: "-webkit-center",
+            }}
+          >
+            <div className="app-container">
+              <AboutMe />
+              <Repositorios />
+              <CI_CD />
+            </div>
+          </div>
         </div>
       </FadeIn>
     </React.Fragment>
