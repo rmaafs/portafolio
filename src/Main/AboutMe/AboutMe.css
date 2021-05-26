@@ -69,3 +69,17 @@ span {
   margin-top: -7px;
   max-width: 630px;
 }
+
+.img-container picture::before {
+  border: 1px solid #d100ff;
+  top: 3px;
+  left: 26px;
+  z-index: -1;
+  content: "";
+  display: block;
+  position: absolute;
+  width: 89%;
+  height: 100%;
+  border-radius: 20px;
+  box-sizing: inherit;
+}
