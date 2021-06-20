@@ -19,7 +19,7 @@
   "scripts": {
     "test:sintax": "prettier --check \"{,!(node_modules)/**/}*.(jsx|css)\"",
     "sintax:fix": "prettier --check --write \"{,!(node_modules)/**/}*.(jsx|css)\"",
-    "lint": "eslint src/**/*.jsx",
+    "lint": "eslint **/*.jsx",
     "mytest": "npm run test:sintax",
     "start": "react-scripts start",
     "build": "react-scripts build",
