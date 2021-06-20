@@ -29,15 +29,15 @@ const Main = () => {
 
   //Lista de loaders que obtendremos para la animación que está cargando la página
   const listLoaders = [
-    <PointSpreadLoading color={Colors.colors.primary} />,
-    <CommonLoading color={Colors.colors.primary} />,
-    <WindMillLoading color={Colors.colors.primary} />,
-    <MeteorRainLoading color={Colors.colors.primary} />,
-    <SemipolarLoading color={Colors.colors.primary} />,
-    <SolarSystemLoading color={Colors.colors.primary} />,
-    <BatteryLoading color={Colors.colors.primary} />,
-    <CoffeeLoading color={Colors.colors.primary} />,
-    <EatLoading color={Colors.colors.primary} />,
+    <PointSpreadLoading color={Colors.colors.primary} key={0} />,
+    <CommonLoading color={Colors.colors.primary} key={1} />,
+    <WindMillLoading color={Colors.colors.primary} key={2} />,
+    <MeteorRainLoading color={Colors.colors.primary} key={3} />,
+    <SemipolarLoading color={Colors.colors.primary} key={4} />,
+    <SolarSystemLoading color={Colors.colors.primary} key={5} />,
+    <BatteryLoading color={Colors.colors.primary} key={6} />,
+    <CoffeeLoading color={Colors.colors.primary} key={7} />,
+    <EatLoading color={Colors.colors.primary} key={8} />,
   ];
 
   function getRandLoader() {

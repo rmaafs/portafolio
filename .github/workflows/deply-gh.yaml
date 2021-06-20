@@ -36,6 +36,12 @@ jobs:
         run: |
           npm test
 
+      - name: Revisar calidad del código
+        run: |
+          echo "Se revisará la calidad del código para que la consola no tenga warnings ni errores."
+          echo "Se validará que no existan variables sin usar, console.logs, malos estándares de código, etc."
+          npm run lint
+
       - name: Build proyect
         env:
           CI: false
