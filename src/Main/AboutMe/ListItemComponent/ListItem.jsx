@@ -16,7 +16,7 @@ const ListItem = (props) => {
           : "list-tech-icon"
       }
     >
-      <a href={props.href} target="_blank">
+      <a href={props.href} target="_blank" rel="noreferrer">
         {props.text}
       </a>
     </li>
