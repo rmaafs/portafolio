@@ -24,7 +24,7 @@
   width: 10px;
   border-radius: 100%;
   background-color: #ff4e4e;
-  animation: orbit3 15s linear infinite;
+  animation: orbit3 13s linear infinite;
   cursor: pointer;
 }
 
@@ -37,7 +37,7 @@
   width: 15px;
   border-radius: 100%;
   background-color: #ff6a00;
-  animation: orbit2 30s linear infinite;
+  animation: orbit2 25s linear infinite;
   cursor: pointer;
 }
 
