@@ -22,7 +22,7 @@ const Repositorio = () => {
   }, []);
 
   return (
-    <div className="col-12 col-md-4 mt-8">
+    <div className="col-12 col-md-4 mt-8 card-codigo">
       <ScrollAnimation animateIn="animate__fadeIn" offset={0}>
         <span className="span-row">Desde el código...</span>
 

@@ -20,13 +20,13 @@
     "test:sintax": "prettier --check \"{,!(node_modules)/**/}*.(jsx|css)\"",
     "sintax:fix": "prettier --check --write \"{,!(node_modules)/**/}*.(jsx|css)\"",
     "lint": "eslint . --ext .jsx",
-    "mytest": "npm run test:sintax",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run mytest && npm run build",
-    "deploy": "npm run mytest && gh-pages -d build"
+    "deploy": "npm run mytest && gh-pages -d build",
+    "check": "npm run test:sintax && npm run lint && jest"
   },
   "eslintConfig": {
     "extends": [
