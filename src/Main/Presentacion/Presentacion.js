@@ -19,7 +19,7 @@ const Presentacion = () => {
         </div>
 
         <div className="col-12 mt-4">
-          <span>Hola, soy Rodrigo Maafs Atilano</span>
+          <span>👋 Hola, soy Rodrigo Maafs Atilano</span>
           <br />
           <span>Estudiante de Ingeniería en Sistemas Computacionales</span>
 
