@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import Reacst, { useEffect, useState, useRef } from "react";
 import RepoComponent from "./RepoComponent/RepoComponent";
 
 export function useFirstRender() {
