@@ -1,0 +1,85 @@
+.aboutme ul {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(140px, 200px));
+  padding: 0px;
+  margin: 20px 0px 0px;
+  overflow: hidden;
+  list-style: none;
+  text-align: left;
+}
+
+.aboutme li {
+  position: relative;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  cursor: pointer;
+}
+
+.aboutme li::before {
+  position: absolute;
+  left: 0px;
+  color: #d100ff;
+}
+
+.aboutme li a {
+  text-decoration: none;
+  color: #ccd6f6;
+}
+
+.aboutme .list-tech-icon::before {
+  content: "▹";
+}
+
+.hover-list-icon::before {
+  content: " ";
+  background-size: 17px 17px;
+  height: 17px;
+  width: 17px;
+  top: 2px;
+}
+
+.hover-list-icon-c::before {
+  background-image: url("/src/assets/svg/c.svg");
+}
+
+.hover-list-icon-java::before {
+  background-image: url("/src/assets/svg/java.svg");
+}
+
+.hover-list-icon-html5::before {
+  background-image: url("/src/assets/svg/html5.svg");
+}
+
+.hover-list-icon-css::before {
+  background-image: url("/src/assets/svg/css.svg");
+  top: 3px;
+}
+
+.hover-list-icon-js::before {
+  background-image: url("/src/assets/svg/js.svg");
+}
+
+.hover-list-icon-react::before {
+  background-image: url("/src/assets/svg/react.svg");
+}
+
+.hover-list-icon-angular::before {
+  background-image: url("/src/assets/svg/angular.svg");
+}
+
+.hover-list-icon-py::before {
+  background-image: url("/src/assets/svg/py.svg");
+}
+
+.hover-list-icon-php::before {
+  background-image: url("/src/assets/svg/php.svg");
+  top: 7px;
+}
+
+.hover-list-icon-nodejs::before {
+  background-image: url("/src/assets/svg/nodejs.svg");
+}
+
+.hover-list-icon-kotlin::before {
+  background-image: url("/src/assets/svg/kotlin.svg");
+}

@@ -33,29 +33,6 @@ span {
   background-color: #d100ff;
 }
 
-.aboutme ul {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(140px, 200px));
-  padding: 0px;
-  margin: 20px 0px 0px;
-  overflow: hidden;
-  list-style: none;
-  text-align: left;
-}
-
-.aboutme li {
-  position: relative;
-  margin-bottom: 10px;
-  padding-left: 20px;
-}
-
-.aboutme li::before {
-  content: "▹";
-  position: absolute;
-  left: 0px;
-  color: #d100ff;
-}
-
 .img-container {
   align-self: center !important;
   text-align: center !important;

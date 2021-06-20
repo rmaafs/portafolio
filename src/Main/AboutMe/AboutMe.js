@@ -2,6 +2,7 @@ import React from "react";
 import "./AboutMe.css";
 import yo_paisaje from "../../assets/yo_paisaje.png";
 import Colors from "../../Colors";
+import ListItem from "./ListItemComponent/ListItem";
 
 const AboutMe = () => {
   return (
@@ -57,18 +58,66 @@ const AboutMe = () => {
             <span>
               Actualmente trabajo personal y profesionalmente con:
               <ul>
-                <li>C++</li>
-                <li>Java</li>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>Javascript</li>
-                <li>React</li>
-                <li>React Native</li>
-                <li>Angular</li>
-                <li>Python</li>
-                <li>PHP</li>
-                <li>Express</li>
-                <li>Kotlin</li>
+                <ListItem
+                  text="C++"
+                  icon="c"
+                  href="https://es.wikipedia.org/wiki/C%2B%2B"
+                />
+                <ListItem
+                  text="Java"
+                  icon="java"
+                  href="https://es.wikipedia.org/wiki/Java_(lenguaje_de_programaci%C3%B3n)"
+                />
+                <ListItem
+                  text="HTML"
+                  icon="html5"
+                  href="https://es.wikipedia.org/wiki/HTML"
+                />
+                <ListItem
+                  text="CSS"
+                  icon="css"
+                  href="https://es.wikipedia.org/wiki/Hoja_de_estilos_en_cascada"
+                />
+                <ListItem
+                  text="Javascript"
+                  icon="js"
+                  href="https://es.wikipedia.org/wiki/JavaScript"
+                />
+                <ListItem
+                  text="React"
+                  icon="react"
+                  href="https://es.wikipedia.org/wiki/React"
+                />
+                <ListItem
+                  text="React Native"
+                  icon="react"
+                  href="https://en.wikipedia.org/wiki/React_Native"
+                />
+                <ListItem
+                  text="Angular"
+                  icon="angular"
+                  href="https://es.wikipedia.org/wiki/Angular_(framework)"
+                />
+                <ListItem
+                  text="Python"
+                  icon="py"
+                  href="https://es.wikipedia.org/wiki/Python"
+                />
+                <ListItem
+                  text="PHP"
+                  icon="php"
+                  href="https://es.wikipedia.org/wiki/PHP"
+                />
+                <ListItem
+                  text="Express"
+                  icon="nodejs"
+                  href="https://en.wikipedia.org/wiki/Express.js"
+                />
+                <ListItem
+                  text="Kotlin"
+                  icon="kotlin"
+                  href="https://es.wikipedia.org/wiki/Kotlin_(lenguaje_de_programaci%C3%B3n)"
+                />
               </ul>
             </span>
           </div>
