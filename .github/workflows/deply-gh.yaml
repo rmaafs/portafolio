@@ -24,7 +24,6 @@ jobs:
       - name: Instalar dependencias
         run: |
           npm install
-          ls
 
       - name: Revisar sintaxis estándar prettier
         run: |

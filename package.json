@@ -17,8 +17,8 @@
     "web-vitals": "^1.1.1"
   },
   "scripts": {
-    "test:sintax": "prettier --check **/*.jsx",
-    "sintax:fix": "prettier --check --write **/*.jsx",
+    "test:sintax": "prettier --check \"{,!(node_modules)/**/}*.jsx\"",
+    "sintax:fix": "prettier --check --write \"{,!(node_modules)/**/}*.jsx\"",
     "mytest": "npm run test:sintax",
     "start": "react-scripts start",
     "build": "react-scripts build",
