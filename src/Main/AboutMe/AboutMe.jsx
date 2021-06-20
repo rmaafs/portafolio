@@ -19,8 +19,7 @@ const AboutMe = () => {
               paddingTop: 20,
             }}
           >
-            <span>
-              Me gusta la tecnología en general. Desde el FrontEnd, hasta la
+            <span>Me gusta la tecnología en general. Desde el FrontEnd, hasta la
               cultura DevOps y encargarme de la seguridad. ¡Me gusta la
               inovación!
             </span>
