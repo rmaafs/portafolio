@@ -32,6 +32,7 @@ jobs:
           echo "Este código usará como estándar la indentación de Prettier."
           echo "Para solucionar tu indentación, ejecuta npm run sintax:fix"
           npm run test:sintax
+          .\node_modules\.bin\prettier-check src/App.jsx
 
       - name: Revisar estándares del proyeccto
         run: |
