@@ -16,7 +16,7 @@
 }
 
 .aboutme li::before {
-     position: absolute;
+  position: absolute;
   left: 0px;
   color: #d100ff;
 }
