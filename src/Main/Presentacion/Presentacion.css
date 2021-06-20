@@ -29,3 +29,31 @@
 .circle {
   border-radius: 76px;
 }
+
+.octicon-mark-github:hover {
+  fill: white;
+}
+
+.octicon-mark-github:hover {
+  fill: white;
+}
+
+.octicon-mail:hover {
+  fill: #dc190a;
+}
+
+.fa-linkedin:hover {
+  color: #0077b0 !important;
+}
+
+.fa-twitter:hover {
+  color: #1c9cea !important;
+}
+
+.fa-instagram:hover {
+  color: #f700d9 !important;
+}
+
+.fa-facebook:hover {
+  color: #1a73ea !important;
+}
