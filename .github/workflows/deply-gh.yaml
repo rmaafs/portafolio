@@ -36,12 +36,6 @@ jobs:
         run: |
           npm test
 
-      - name: Mejorar cálidad de código
-        uses: reviewdog/action-eslint@v1
-        with:
-          reporter: github-pr-review # Change reporter.
-          eslint_flags: "src/"
-
       - name: Calidad del código
         run: |
           echo "Se revisará la calidad del código para que la consola no tenga warnings ni errores."
