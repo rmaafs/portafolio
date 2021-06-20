@@ -12,7 +12,6 @@ export function useFirstRender() {
 const Repositories = () => {
   const firstRender = useFirstRender();
   const [repos, setRepos] = useState([]);
-  console.log("Tronando");
 
   let showThisRepos = [
     348843782, //alert-port-scanner
