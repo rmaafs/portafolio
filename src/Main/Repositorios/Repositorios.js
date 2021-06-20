@@ -3,6 +3,7 @@ import Colors from "../../Colors";
 import RepoComponent from "../Repositories/RepoComponent/RepoComponent";
 import ScrollAnimation from "react-animate-on-scroll";
 import "./Repositorios.css";
+import HelpIcon from "../HelpIcon";
 
 export function useFirstRender() {
   const firstRender = useRef(true);
@@ -50,6 +51,18 @@ const Repositorios = () => {
       <div className="col-xs-12 col-md-6 no-padding repositorios">
         <h1 className="numbered-heading">
           <span>Repositorios</span>
+          <HelpIcon>
+            Los repositorios son algunos de mis trabajos y proyectos que he
+            realizado.
+            <br />
+            Si eres desarrollador, puedes consultar el código fuente.
+            <br />
+            <br />
+            GitHub es una página donde muchos desarrolladores comparten su
+            código con la comunidad.
+            <br />
+            En pocas palabras, una red social para programadores 🤓
+          </HelpIcon>
         </h1>
       </div>
 
