@@ -27,7 +27,7 @@ const AboutMe = () => {
             <br />
             <br />
             <span>
-              Estudio el penúltimo semestre en la{" "}
+              Estudio el último semestre en la{" "}
               <a
                 href="https://uaa.mx/"
                 target="_blank"
