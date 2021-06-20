@@ -19,17 +19,14 @@ const AboutMe = () => {
               paddingTop: 20,
             }}
           >
-            <span>Me gusta la tecnología en general. Desde el FrontEnd, hasta la
+            <span>
+              Me gusta la tecnología en general. Desde el FrontEnd, hasta la
               cultura DevOps y encargarme de la seguridad. ¡Me gusta la
               inovación!
             </span>
             <br />
             <br />
-               <span>
-              
-              
-              
-              
+            <span>
               Estudio el último semestre en la{" "}
               <a
                 href="https://uaa.mx/"
