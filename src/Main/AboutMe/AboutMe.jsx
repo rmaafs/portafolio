@@ -98,14 +98,14 @@ const AboutMe = () => {
                   href="https://es.wikipedia.org/wiki/Angular_(framework)"
                 />
                 <ListItem
-                  text="Python"
-                  icon="py"
-                  href="https://es.wikipedia.org/wiki/Python"
-                />
-                <ListItem
                   text="PHP"
                   icon="php"
                   href="https://es.wikipedia.org/wiki/PHP"
+                />
+                <ListItem
+                  text="Python"
+                  icon="py"
+                  href="https://es.wikipedia.org/wiki/Python"
                 />
                 <ListItem
                   text="Express"
