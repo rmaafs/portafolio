@@ -17,7 +17,7 @@
     "web-vitals": "^2.1.0"
   },
   "scripts": {
-    "test:sintax": "prettier --check \"{,!(node_modules)/**/}*.(jsx|css)\"",
+    "sintax:test": "prettier --check \"{,!(node_modules)/**/}*.(jsx|css)\"",
     "sintax:fix": "prettier --check --write \"{,!(node_modules)/**/}*.(jsx|css)\"",
     "lint": "eslint . --ext .jsx",
     "start": "react-scripts start",
@@ -26,7 +26,7 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run mytest && npm run build",
     "deploy": "npm run mytest && gh-pages -d build",
-    "check": "npm run test:sintax && npm run lint && jest"
+    "check": "npm run sintax:test && npm run lint && jest"
   },
   "eslintConfig": {
     "extends": [
