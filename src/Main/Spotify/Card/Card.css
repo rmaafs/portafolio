@@ -55,3 +55,25 @@
   align-self: center;
   width: 23px;
 }
+
+.sp-clickeable {
+  text-decoration: none;
+  color: #ccd6f6;
+}
+
+.sp-clickeable:link {
+  text-decoration: none;
+}
+
+.sp-clickeable:visited {
+  text-decoration: none;
+}
+
+.sp-clickeable:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.sp-clickeable:active {
+  text-decoration: none;
+}

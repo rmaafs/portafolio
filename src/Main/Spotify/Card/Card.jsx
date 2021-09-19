@@ -79,6 +79,19 @@ const Card = ({ track, onFinishSong }) => {
     setProgress(spProgress);
   };
 
+  const Clickeable = ({ children }) => {
+    return (
+      <a
+        className="sp-clickeable"
+        href={track.url}
+        target="_blank"
+        rel="noreferrer"
+      >
+        {children}
+      </a>
+    );
+  };
+
   useEffect(() => {
     /*setInterval(function () {
       tickTimer();
@@ -94,11 +107,15 @@ const Card = ({ track, onFinishSong }) => {
         </div>
 
         <div className="sp-img-container">
-          <img src={track.image.url} />
+          <Clickeable>
+            <img src={track.image.url} />
+          </Clickeable>
         </div>
         <div className="sp-track text-left">
-          <h2>{refactorLenght(track.name)}</h2>
-          <h3>{track.artista}</h3>
+          <Clickeable>
+            <h2>{refactorLenght(track.name)}</h2>
+            <h3>{track.artista}</h3>
+          </Clickeable>
         </div>
 
         <div className="sp-progress-container col-md-12 row">
