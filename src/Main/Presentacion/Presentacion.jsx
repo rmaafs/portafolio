@@ -1,5 +1,6 @@
 import React from "react";
 import ContactComponent from "../LeftSidebar/ContactComponent/ContactComponent";
+import Spotify from "../Spotify/Spotify";
 import Planetas from "./Planetas/Planetas";
 import "./Presentacion.css";
 
@@ -22,6 +23,8 @@ const Presentacion = () => {
           <span>👋 Hola, soy Rodrigo Maafs Atilano</span>
           <br />
           <span>Estudiante de Ingeniería en Sistemas Computacionales</span>
+
+          <Spotify />
 
           <div className="col-12 mt-4">
             <div className="row contact-list">
