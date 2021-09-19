@@ -93,9 +93,10 @@ const Card = ({ track, onFinishSong }) => {
   };
 
   useEffect(() => {
-    setInterval(function () {
+    /*setInterval(function () {
       tickTimer();
-    }, 1000);
+    }, 1000);*/
+    tickTimer();
   }, []);
 
   const RenderInfo = () => {
@@ -129,7 +130,9 @@ const Card = ({ track, onFinishSong }) => {
               ></div>
             </div>
           </div>
-          <div className="col-2 sp-progress-time">{formatTime(duration)}</div>
+          <div className="col-2 sp-progress-time sp-progress-time-right">
+            {formatTime(duration)}
+          </div>
         </div>
       </Fragment>
     );

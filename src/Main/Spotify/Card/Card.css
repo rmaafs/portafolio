@@ -56,6 +56,11 @@
   width: 23px;
 }
 
+.sp-progress-time-right {
+  position: absolute;
+  right: 22px;
+}
+
 .sp-clickeable {
   text-decoration: none;
   color: #ccd6f6;
