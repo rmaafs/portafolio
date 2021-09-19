@@ -1,5 +1,6 @@
 import React from "react";
 import ContactComponent from "../LeftSidebar/ContactComponent/ContactComponent";
+import Spotify from "../Spotify/Spotify";
 import Planetas from "./Planetas/Planetas";
 import "./Presentacion.css";
 
@@ -57,6 +58,8 @@ const Presentacion = () => {
               />
             </div>
           </div>
+
+          <Spotify />
         </div>
       </div>
     </div>

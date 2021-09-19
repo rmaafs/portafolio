@@ -1,0 +1,12 @@
+.sp-container {
+  padding-top: 26px;
+  text-align: -webkit-center;
+}
+
+.sp-title {
+  font-size: 15px;
+  color: #ccd6f6;
+  justify-content: center;
+  padding-right: 15px;
+  padding-bottom: 10px;
+}
