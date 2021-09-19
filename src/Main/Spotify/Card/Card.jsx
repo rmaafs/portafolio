@@ -43,7 +43,7 @@ const Card = ({ track, onFinishSong }) => {
    * @returns Retorna texto minimizado
    */
   function refactorLenght(txt) {
-    let length = 40;
+    let length = 30;
     if (txt.length > length) {
       return txt.substring(0, length) + "...";
     }
@@ -80,10 +80,9 @@ const Card = ({ track, onFinishSong }) => {
   };
 
   useEffect(() => {
-    /*setInterval(function () {
+    setInterval(function () {
       tickTimer();
-    }, 1000);*/
-    tickTimer();
+    }, 1000);
   }, []);
 
   const RenderInfo = () => {
