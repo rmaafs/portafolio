@@ -80,15 +80,18 @@ const Card = ({ track, onFinishSong }) => {
   };
 
   useEffect(() => {
-    setInterval(function () {
+    /*setInterval(function () {
       tickTimer();
-    }, 1000);
+    }, 1000);*/
+    tickTimer();
   }, []);
 
   const RenderInfo = () => {
     return (
       <Fragment>
-        <SpinBars />
+        <div className="sp-spin-container">
+          <SpinBars />
+        </div>
 
         <div className="sp-img-container">
           <img src={track.image.url} />

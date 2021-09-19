@@ -7,13 +7,22 @@
   border-radius: 20px;
 }
 
+.sp-card .sp-spin-container {
+  align-self: center;
+  padding-right: 10px;
+}
+
+.sp-card .sp-img-container {
+  margin-right: 20px;
+}
+
 .sp-card .sp-img-container img {
   width: 50px;
 }
 
 .sp-card .sp-track {
   align-self: self-end;
-  padding-left: 10px;
+  margin-right: auto;
 }
 
 .sp-card .sp-track h2 {
