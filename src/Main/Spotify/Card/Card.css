@@ -1,10 +1,11 @@
 .sp-card {
-  width: "100%";
-  max-width: 200px;
+  width: fit-content;
+  max-width: 400px;
   justify-content: center;
   background-color: #0000005e;
   padding: 14px;
   border-radius: 20px;
+  margin-right: 10px;
 }
 
 .sp-card .sp-img-container img {
