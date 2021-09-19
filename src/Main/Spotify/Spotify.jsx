@@ -33,6 +33,14 @@ const Spotify = () => {
         Por ahora no estoy escuchando nada.
         <br />
         Vuelve pronto y mira la magia 😊
+        <br />
+        <a
+          href="https://github.com/rmaafs/portafolio/pull/16#issuecomment-922448479"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Click para ver una imagen de demostración
+        </a>
       </div>
     );
   };
