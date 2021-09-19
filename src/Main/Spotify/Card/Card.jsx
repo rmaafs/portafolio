@@ -57,7 +57,7 @@ const Card = ({ track, onFinishSong }) => {
   const tickTimer = () => {
     if (!track || !track.image) return;
 
-    console.warn("Tick", spProgress);
+    //console.warn("Tick", spProgress);
     if (spProgress < 0) spProgress = 0;
     spProgress += 1000;
 
@@ -70,7 +70,7 @@ const Card = ({ track, onFinishSong }) => {
           track = newTrack;
           setNewTrack();
         });
-      }, 2000);
+      }, 3000);
       return;
     }
 
@@ -84,8 +84,6 @@ const Card = ({ track, onFinishSong }) => {
     setInterval(function () {
       tickTimer();
     }, 1000);
-
-    tickTimer();
   }, []);
 
   const RenderInfo = () => {
