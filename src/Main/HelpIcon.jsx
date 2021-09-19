@@ -19,6 +19,7 @@ const HelpIcon = (props) => {
           position: "absolute",
           bottom: "30px",
           cursor: "pointer",
+          ...(props.style || null),
         }}
         space="preserve"
       >
