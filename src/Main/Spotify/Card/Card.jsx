@@ -99,10 +99,8 @@ const Card = ({ track, onFinishSong }) => {
         </div>
 
         <div className="sp-progress-container col-md-12 row">
-          <div className="col-md-2 sp-progress-time">
-            {formatTime(progress)}
-          </div>
-          <div className="col-md-8">
+          <div className="col-2 sp-progress-time">{formatTime(progress)}</div>
+          <div className="col-8">
             <div className="sp-progress text-left">
               <div
                 className="sp-progress-bar"
@@ -112,9 +110,7 @@ const Card = ({ track, onFinishSong }) => {
               ></div>
             </div>
           </div>
-          <div className="col-md-2 sp-progress-time">
-            {formatTime(duration)}
-          </div>
+          <div className="col-2 sp-progress-time">{formatTime(duration)}</div>
         </div>
       </Fragment>
     );

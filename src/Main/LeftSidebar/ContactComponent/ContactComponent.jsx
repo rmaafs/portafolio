@@ -31,6 +31,7 @@ function getIcon(type) {
         version="1.1"
         width="20"
         role="img"
+        style={{ marginLeft: "10px" }}
       >
         <path
           fillRule="evenodd"

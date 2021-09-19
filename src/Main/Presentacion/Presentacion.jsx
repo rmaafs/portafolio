@@ -24,8 +24,6 @@ const Presentacion = () => {
           <br />
           <span>Estudiante de Ingeniería en Sistemas Computacionales</span>
 
-          <Spotify />
-
           <div className="col-12 mt-4">
             <div className="row contact-list">
               <ContactComponent
@@ -60,6 +58,8 @@ const Presentacion = () => {
               />
             </div>
           </div>
+
+          <Spotify />
         </div>
       </div>
     </div>
