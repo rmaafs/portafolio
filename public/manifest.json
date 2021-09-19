@@ -1,6 +1,6 @@
 {
-  "short_name": "Rodrigo Maafs Atilano",
-  "name": "Estudiante de Ingeniería en Sistemas Computacionales",
+  "short_name": "rmaafs",
+  "name": "Portafolio de Rodrigo Maafs Atilano",
   "icons": [
     {
       "src": "favicon.ico",
@@ -15,7 +15,8 @@
     {
       "src": "logo512.png",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "512x512",
+      "purpose": "maskable"
     }
   ],
   "start_url": ".",
