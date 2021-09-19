@@ -24,3 +24,25 @@
 .sp-card .sp-track h3 {
   font-size: 10px;
 }
+
+/** Progress **/
+.sp-progress-container {
+  padding-top: 7px;
+}
+
+.sp-progress {
+  border: 1px solid transparent;
+  background-color: #535353;
+  margin-top: 5px;
+}
+
+.sp-progress-bar {
+  background-color: #b3b3b3;
+  border: 1px solid transparent;
+  height: 1px;
+}
+
+.sp-progress-time {
+  font-size: 9px;
+  align-self: center;
+}
