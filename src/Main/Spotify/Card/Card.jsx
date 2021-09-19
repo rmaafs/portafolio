@@ -30,7 +30,6 @@ const Card = ({ track, onFinishSong }) => {
    * Función que resetea los timers cuando se cambia de canción
    */
   const setNewTrack = () => {
-    console.log("Nueva track:", track);
     setProgressBar(0);
     setProgress(track.progress);
     setDuration(track.duration);

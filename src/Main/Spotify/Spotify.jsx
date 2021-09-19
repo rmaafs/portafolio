@@ -23,7 +23,6 @@ const Spotify = () => {
   };
 
   const handleFinishSong = async () => {
-    console.log("Esperando nueva canción");
     return fetchData();
   };
 
