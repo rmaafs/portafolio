@@ -27,6 +27,16 @@ const Spotify = () => {
     return fetchData();
   };
 
+  const NoEscuchando = () => {
+    return (
+      <div className="sp-title">
+        Por ahora no estoy escuchando nada.
+        <br />
+        Vuelve pronto y mira la magia 😊
+      </div>
+    );
+  };
+
   useEffect(() => {
     fetchData();
   }, []);
@@ -52,8 +62,10 @@ const Spotify = () => {
         </HelpIcon>
       </div>
 
-      {track && track.progress && (
+      {track && track.progress ? (
         <Card track={track} onFinishSong={handleFinishSong} />
+      ) : (
+        <NoEscuchando />
       )}
     </div>
   );
