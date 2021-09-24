@@ -7,6 +7,7 @@ const Card = ({ track, onFinishSong }) => {
   const [progress, setProgress] = useState(0);
   const [duration, setDuration] = useState(track.duration);
   let spProgress = track.progress - 1000;
+  let spDuration = track.duration;
 
   /**
    * Función que formatea un timestamp a string
@@ -35,6 +36,7 @@ const Card = ({ track, onFinishSong }) => {
     setDuration(track.duration);
 
     spProgress = track.progress - 1000;
+    spDuration = track.duration;
   };
 
   /**
@@ -61,8 +63,8 @@ const Card = ({ track, onFinishSong }) => {
     spProgress += 1000;
 
     //Si la canción ya ha acabado...
-    if (spProgress > duration) {
-      spProgress = duration;
+    if (spProgress > spDuration) {
+      spProgress = spDuration;
       track = {};
       setTimeout(function () {
         onFinishSong().then((newTrack) => {
@@ -73,7 +75,7 @@ const Card = ({ track, onFinishSong }) => {
       return;
     }
 
-    const newProgress = (spProgress * 100) / duration;
+    const newProgress = (spProgress * 100) / spDuration;
     setProgressBar(newProgress);
 
     setProgress(spProgress);
