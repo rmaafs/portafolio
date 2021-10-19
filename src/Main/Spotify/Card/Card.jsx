@@ -97,7 +97,7 @@ const Card = ({ track, onFinishSong }) => {
   useEffect(() => {
     setInterval(function () {
       tickTimer();
-    }, 1000);
+    }, 100000);
   }, []);
 
   const RenderInfo = () => {
