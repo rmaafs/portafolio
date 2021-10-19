@@ -1,20 +1,15 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import AnimationLoader from "./Loading/AnimationLoader";
 import "./Resultado.css";
 
 const Resultado = ({ track, loading, onChoose }) => {
-  const handleClick = () => {
-    if (!loading && track) {
-      onChoose();
+  const [palabra, setPalabra] = useState("Buscando...");
 
-      fetch("https://api.rmaafs.com/spotify/queue", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        referrerPolicy: "no-referrer",
-        body: JSON.stringify({ track: track.id }),
-      });
+  const handleClick = async () => {
+    if (!loading && track) {
+      setPalabra("Agregando...");
+      await onChoose();
+      setPalabra("Buscando...");
     }
   };
 
@@ -26,7 +21,7 @@ const Resultado = ({ track, loading, onChoose }) => {
       {loading ? (
         <Fragment>
           <AnimationLoader />
-          <div className="resultado-loading">Buscando...</div>
+          <div className="resultado-loading">{palabra}</div>
         </Fragment>
       ) : (
         <Fragment>

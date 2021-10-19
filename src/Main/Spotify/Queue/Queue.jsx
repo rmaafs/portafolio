@@ -1,14 +1,25 @@
-import React, { useState } from "react";
+import React, { Fragment, useState } from "react";
 import Buscador from "./Buscador/Buscador";
 import "./Queue.css";
 
 const Queue = () => {
   const [buscando, setBuscando] = useState(false);
   const [elegido, setElegido] = useState(false);
+  const [msgError, setMsgError] = useState("");
 
   const handleOnChoose = () => {
+    setMsgError("");
     setBuscando(false);
     setElegido(true);
+    setTimeout(function () {
+      setElegido(false);
+    }, 5000);
+  };
+
+  const handleError = (err) => {
+    setBuscando(false);
+    setElegido(true);
+    setMsgError(err);
     setTimeout(function () {
       setElegido(false);
     }, 5000);
@@ -25,9 +36,21 @@ const Queue = () => {
 
   const Agradecer = () => {
     return (
-      <div className="agradecer">
-        <i className={"fa fa-check fa-fw mr-2 v-align-middle"}></i>
-        Tu canción será la próxima en escucharse. ¡Gracias!
+      <div className={"agradecer" + (msgError ? " con-error" : "")}>
+        <i
+          className={
+            "fa fa-" +
+            (msgError ? "times" : "check") +
+            " fa-fw mr-2 v-align-middle"
+          }
+        ></i>
+        {msgError === "" ? (
+          <Fragment>
+            Tu canción será la próxima en escucharse. ¡Gracias!
+          </Fragment>
+        ) : (
+          <Fragment>{msgError}</Fragment>
+        )}
       </div>
     );
   };
@@ -39,6 +62,7 @@ const Queue = () => {
           <Buscador
             onClose={() => setBuscando(false)}
             onChoose={handleOnChoose}
+            onError={handleError}
           />
         ) : elegido ? (
           <Agradecer />

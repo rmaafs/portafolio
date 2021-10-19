@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Resultado from "../Resultado/Resultado";
 import "./Buscador.css";
 
-const Buscador = ({ onClose, onChoose }) => {
+const Buscador = ({ onClose, onChoose, onError }) => {
   const [loading, setLoading] = useState(false);
   const [text, setText] = React.useState(""); //Timer para esperar cuando escriba algo
   const [track, setTrack] = React.useState(undefined);
@@ -45,6 +45,29 @@ const Buscador = ({ onClose, onChoose }) => {
       });
   };
 
+  const handleChoose = async () => {
+    setLoading(true);
+    await fetch("https://api.rmaafs.com/spotify/queue", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      referrerPolicy: "no-referrer",
+      body: JSON.stringify({ track: track.id }),
+    })
+      .then((resp) => resp.json())
+      .then((data) => {
+        if (!data.error) {
+          onChoose();
+        } else {
+          onError(data.error);
+        }
+      })
+      .catch((err) => {
+        onError(err);
+      });
+  };
+
   return (
     <div className="buscador-container row">
       <div className="buscador">
@@ -59,7 +82,7 @@ const Buscador = ({ onClose, onChoose }) => {
         ></i>
 
         {loading || track ? (
-          <Resultado track={track} loading={loading} onChoose={onChoose} />
+          <Resultado track={track} loading={loading} onChoose={handleChoose} />
         ) : null}
       </div>
     </div>

@@ -23,3 +23,7 @@
   color: #74d374;
   padding-top: 8px;
 }
+
+.queue .con-error {
+  color: red;
+}
