@@ -1,5 +1,6 @@
 .queue-container {
   max-width: 250px;
+  justify-content: center;
 }
 
 .queue {
@@ -10,7 +11,7 @@
 .recomendar {
   color: #ccd6f6;
   cursor: pointer;
-  padding-left: 30px;
+  padding-top: 5px;
 }
 
 .recomendar:hover {

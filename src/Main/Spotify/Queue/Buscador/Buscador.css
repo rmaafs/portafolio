@@ -1,16 +1,16 @@
 .buscador {
   position: absolute;
-  margin-left: 22px;
 }
 
 .buscador input {
   background-color: #ffffff1f;
   border-width: 0px;
   margin: 10px;
+  margin-top: 0px;
   padding: 7px;
   padding-left: 12px;
-  width: -webkit-fill-available;
-  max-width: 250px;
+  width: 200px;
+  max-width: 200px;
   border-radius: 10px;
   color: white;
   font-size: 14px;
@@ -19,11 +19,13 @@
 .icon-close {
   color: red;
   position: absolute;
-  margin-top: 19px;
+  margin-top: 9px;
   cursor: pointer;
   margin-left: -36px;
 }
 
-/*.buscador-container {
-  max-width: 250px;
-}*/
+.buscador-container {
+  justify-content: center;
+  height: 36px;
+  width: 439px;
+}

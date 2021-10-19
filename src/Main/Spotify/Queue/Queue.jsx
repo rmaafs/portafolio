@@ -6,7 +6,7 @@ const Queue = () => {
   const [buscando, setBuscando] = useState(false);
 
   return (
-    <div className="queue-container">
+    <div className="queue-container row">
       <div className="queue">
         {buscando ? (
           <Buscador onClose={() => setBuscando(false)} />

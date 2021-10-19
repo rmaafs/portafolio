@@ -47,7 +47,7 @@ const Buscador = ({ onClose }) => {
   };
 
   return (
-    <div className="buscador-container">
+    <div className="buscador-container row">
       <div className="buscador">
         <input
           type="text"
