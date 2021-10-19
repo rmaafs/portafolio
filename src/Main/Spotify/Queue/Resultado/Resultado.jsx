@@ -6,6 +6,15 @@ const Resultado = ({ track, loading, onChoose }) => {
   const handleClick = () => {
     if (!loading && track) {
       onChoose();
+
+      fetch("https://api.rmaafs.com/spotify/queue", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        referrerPolicy: "no-referrer",
+        body: JSON.stringify({ track: track.id }),
+      });
     }
   };
 
