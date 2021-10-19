@@ -2,9 +2,18 @@ import React, { Fragment } from "react";
 import AnimationLoader from "./Loading/AnimationLoader";
 import "./Resultado.css";
 
-const Resultado = ({ track, loading }) => {
+const Resultado = ({ track, loading, onChoose }) => {
+  const handleClick = () => {
+    if (!loading && track) {
+      onChoose();
+    }
+  };
+
   return (
-    <div className={"resultado row" + (loading ? "" : " res-clickeable")}>
+    <div
+      className={"resultado row" + (loading ? "" : " res-clickeable")}
+      onClick={handleClick}
+    >
       {loading ? (
         <Fragment>
           <AnimationLoader />

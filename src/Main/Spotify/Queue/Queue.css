@@ -17,3 +17,8 @@
 .recomendar:hover {
   color: white;
 }
+
+.queue .agradecer {
+  font-size: 12px;
+  color: #74d374;
+}

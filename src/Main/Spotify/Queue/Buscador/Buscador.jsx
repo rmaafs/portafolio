@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Resultado from "../Resultado/Resultado";
 import "./Buscador.css";
 
-const Buscador = ({ onClose }) => {
+const Buscador = ({ onClose, onChoose }) => {
   const [loading, setLoading] = useState(false);
   const [text, setText] = React.useState(""); //Timer para esperar cuando escriba algo
   const [track, setTrack] = React.useState(undefined);
@@ -32,7 +32,6 @@ const Buscador = ({ onClose }) => {
   };
 
   const search = () => {
-    console.warn("Buscando..." + text);
     fetch("https://api.rmaafs.com/spotify/search?q=" + text)
       .then((data) => data.json())
       .then((json) => {
@@ -60,7 +59,7 @@ const Buscador = ({ onClose }) => {
         ></i>
 
         {loading || track ? (
-          <Resultado track={track} loading={loading} />
+          <Resultado track={track} loading={loading} onChoose={onChoose} />
         ) : null}
       </div>
     </div>
