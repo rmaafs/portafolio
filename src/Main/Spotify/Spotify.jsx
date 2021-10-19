@@ -36,7 +36,7 @@ const Spotify = () => {
         Vuelve pronto y mira la magia 😊
         <br />
         <a
-          href="https://github.com/rmaafs/portafolio/pull/16#issuecomment-922448479"
+          href="https://github.com/rmaafs/portafolio/pull/22#issuecomment-946394957"
           target="_blank"
           rel="noreferrer"
         >
