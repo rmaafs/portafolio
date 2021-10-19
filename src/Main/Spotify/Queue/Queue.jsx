@@ -27,9 +27,7 @@ const Queue = () => {
     return (
       <div className="agradecer">
         <i className={"fa fa-check fa-fw mr-2 v-align-middle"}></i>
-        Tu canción se escuchará cuando se acabe esta.
-        <br />
-        ¡Gracias!
+        Tu canción será la próxima en escucharse. ¡Gracias!
       </div>
     );
   };
