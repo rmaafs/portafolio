@@ -1,0 +1,29 @@
+.queue-container {
+  max-width: 250px;
+  justify-content: center;
+}
+
+.queue {
+  padding-top: 10px;
+  position: absolute;
+}
+
+.recomendar {
+  color: #ccd6f6;
+  cursor: pointer;
+  padding-top: 5px;
+}
+
+.recomendar:hover {
+  color: white;
+}
+
+.queue .agradecer {
+  font-size: 12px;
+  color: #74d374;
+  padding-top: 8px;
+}
+
+.queue .con-error {
+  color: red;
+}

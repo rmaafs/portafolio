@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import HelpIcon from "../HelpIcon";
 import Card from "./Card/Card";
+import Queue from "./Queue/Queue";
 import "./Spotify.css";
 
 const Spotify = () => {
@@ -71,7 +72,10 @@ const Spotify = () => {
       </div>
 
       {track && track.progress ? (
-        <Card track={track} onFinishSong={handleFinishSong} />
+        <Fragment>
+          <Card track={track} onFinishSong={handleFinishSong} />
+          <Queue />
+        </Fragment>
       ) : (
         <NoEscuchando />
       )}
