@@ -1,13 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
+import Buscador from "./Buscador/Buscador";
 import "./Queue.css";
 
 const Queue = () => {
+  const [buscando, setBuscando] = useState(false);
+
   return (
     <div className="queue">
-      <div className="recomendar">
-        <i className={"fa fa-plus fa-fw mr-2 v-align-middle"}></i>
-        Recomendar canción
-      </div>
+      {buscando ? (
+        <Buscador />
+      ) : (
+        <div className="recomendar" onClick={() => setBuscando(true)}>
+          <i className={"fa fa-plus fa-fw mr-2 v-align-middle"}></i>
+          Recomendar canción
+        </div>
+      )}
     </div>
   );
 };

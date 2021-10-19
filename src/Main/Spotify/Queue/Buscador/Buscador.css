@@ -1,0 +1,12 @@
+.buscador input {
+  background-color: #ffffff1f;
+  border-width: 0px;
+  margin: 10px;
+  padding: 7px;
+  padding-left: 12px;
+  width: -webkit-fill-available;
+  max-width: 250px;
+  border-radius: 10px;
+  color: white;
+  font-size: 14px;
+}
