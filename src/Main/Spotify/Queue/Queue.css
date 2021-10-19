@@ -1,10 +1,16 @@
+.queue-container {
+  max-width: 250px;
+}
+
 .queue {
   padding-top: 10px;
+  position: absolute;
 }
 
 .recomendar {
   color: #ccd6f6;
   cursor: pointer;
+  padding-left: 30px;
 }
 
 .recomendar:hover {

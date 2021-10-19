@@ -1,5 +1,6 @@
 .resultado {
-  max-width: 250px;
+  /*max-width: 250px;*/
+  width: max-content;
   max-height: 78px;
   justify-content: left;
   background-color: #0000005e;

@@ -1,3 +1,8 @@
+.buscador {
+  position: absolute;
+  margin-left: 22px;
+}
+
 .buscador input {
   background-color: #ffffff1f;
   border-width: 0px;
@@ -10,3 +15,15 @@
   color: white;
   font-size: 14px;
 }
+
+.icon-close {
+  color: red;
+  position: absolute;
+  margin-top: 19px;
+  cursor: pointer;
+  margin-left: -36px;
+}
+
+/*.buscador-container {
+  max-width: 250px;
+}*/
