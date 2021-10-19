@@ -20,7 +20,7 @@ const Buscador = () => {
     <div className="buscador">
       <input type="text" placeholder="Canción o artista..." />
 
-      <Resultado track={track} />
+      <Resultado track={track} loading={false} />
     </div>
   );
 };

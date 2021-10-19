@@ -1,18 +1,28 @@
-import React from "react";
+import React, { Fragment } from "react";
+import AnimationLoader from "./Loading/AnimationLoader";
 import "./Resultado.css";
 
-const Resultado = ({ track }) => {
+const Resultado = ({ track, loading }) => {
   return (
-    <div className="resultado row">
-      <i className={"fa fa-plus fa-fw icon-add"}></i>
+    <div className={"resultado row" + (loading ? "" : " res-clickeable")}>
+      {loading ? (
+        <Fragment>
+          <AnimationLoader />
+          <div className="resultado-loading">Buscando...</div>
+        </Fragment>
+      ) : (
+        <Fragment>
+          <i className={"fa fa-plus fa-fw icon-add"}></i>
 
-      <div className="buscador-img-container">
-        <img src={track.image.url} />
-      </div>
-      <div className="buscador-track text-left">
-        <h2>{refactorLenght(track.name)}</h2>
-        <h3>{track.artista}</h3>
-      </div>
+          <div className="buscador-img-container">
+            <img src={track.image.url} />
+          </div>
+          <div className="buscador-track text-left">
+            <h2>{refactorLenght(track.name)}</h2>
+            <h3>{track.artista}</h3>
+          </div>
+        </Fragment>
+      )}
     </div>
   );
 };
