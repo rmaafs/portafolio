@@ -4,6 +4,8 @@ import "./Resultado.css";
 const Resultado = ({ track }) => {
   return (
     <div className="resultado row">
+      <i className={"fa fa-plus fa-fw icon-add"}></i>
+
       <div className="buscador-img-container">
         <img src={track.image.url} />
       </div>
