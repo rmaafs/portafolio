@@ -1,0 +1,12 @@
+.queue {
+  padding-top: 10px;
+}
+
+.recomendar {
+  color: #ccd6f6;
+  cursor: pointer;
+}
+
+.recomendar:hover {
+  color: white;
+}
