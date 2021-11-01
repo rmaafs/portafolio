@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import Colors from "../../Colors";
-import RepoComponent from "../Repositories/RepoComponent/RepoComponent";
+import RepoComponent from "./RepoComponent/RepoComponent";
 import ScrollAnimation from "react-animate-on-scroll";
 import "./Repositorios.css";
 import HelpIcon from "../HelpIcon";
