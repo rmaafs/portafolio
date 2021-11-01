@@ -6,6 +6,8 @@ import Planetas from "./Planetas/Planetas";
 import "./Presentacion.css";
 
 const Presentacion = () => {
+  const isNavidad = new Date().getMonth() + 1 === 12;
+
   return (
     <div className="col-12 presentacion">
       <div className="row">
@@ -19,7 +21,7 @@ const Presentacion = () => {
             style={{ maxWidth: 150, border: "2px solid #d100ff" }}
           />
 
-          <Gorrito />
+          {isNavidad && <Gorrito />}
         </div>
 
         <div className="col-12 mt-4 mb-5">
