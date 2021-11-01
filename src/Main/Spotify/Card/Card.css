@@ -14,6 +14,8 @@
 
 .sp-card .sp-img-container {
   margin-right: 20px;
+  height: 50px;
+  max-height: 50px;
 }
 
 .sp-card .sp-img-container img {

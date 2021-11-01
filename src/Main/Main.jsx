@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import AboutMe from "./AboutMe/AboutMe";
 import Presentacion from "./Presentacion/Presentacion";
 import Repositorios from "./Repositorios/Repositorios";
@@ -17,15 +17,17 @@ import FadeIn from "react-fade-in";
 import Colors from "../Colors";
 import CI_CD from "./CI_CD/CI_CD";
 import Footer from "./Footer/Footer";
+import PreImageLoader from "./PreImageLoader/PreImageLoader";
 
 const Main = () => {
   const [loaded, setLoaded] = useState(false); //¿La página ha sido cargada?
 
-  useEffect(() => {
-    setTimeout(() => {
-      setLoaded(true);
-    }, 3000);
-  });
+  /**
+   * Función que se ejecuta cuando termina de cachear las imágenes.
+   */
+  const handleFinishPreLoader = () => {
+    setLoaded(true);
+  };
 
   //Lista de loaders que obtendremos para la animación que está cargando la página
   const listLoaders = [
@@ -52,6 +54,7 @@ const Main = () => {
 
   return (
     <React.Fragment>
+      <PreImageLoader onFinish={handleFinishPreLoader} />
       {loaded ? null : getRandLoader()}
       <FadeIn transitionDuration={1000} visible={loaded}>
         <div

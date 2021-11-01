@@ -109,7 +109,7 @@ const Card = ({ track, onFinishSong }) => {
 
         <div className="sp-img-container">
           <Clickeable>
-            <img src={track.image.url} />
+            <img src={track.image.url} loading="lazy" />
           </Clickeable>
         </div>
         <div className="sp-track text-left">
