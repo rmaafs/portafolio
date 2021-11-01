@@ -1,6 +1,7 @@
 import React from "react";
 import ContactComponent from "../LeftSidebar/ContactComponent/ContactComponent";
 import Spotify from "../Spotify/Spotify";
+import Gorrito from "./Gorrito/Gorrito";
 import Planetas from "./Planetas/Planetas";
 import "./Presentacion.css";
 
@@ -17,6 +18,8 @@ const Presentacion = () => {
             className="circle mb-3"
             style={{ maxWidth: 150, border: "2px solid #d100ff" }}
           />
+
+          <Gorrito />
         </div>
 
         <div className="col-12 mt-4 mb-5">
