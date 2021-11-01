@@ -1,4 +1,4 @@
-name: Build and Deploy
+name: 👀 Code Quality
 on:
   pull_request:
     branches:
@@ -38,7 +38,7 @@ jobs:
           echo "Se revisará la calidad del código para que la consola no tenga warnings ni errores."
           echo "Se validará que no existan variables sin usar, console.logs, malos estándares de código, etc."
           npm run lint
-      - name: 📦 Build proyect
+      - name: 📦 Build proyecto
         env:
           CI: false
         run: |
