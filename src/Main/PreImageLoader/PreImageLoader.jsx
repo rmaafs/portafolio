@@ -29,6 +29,17 @@ const PreImageLoader = ({ onFinish }) => {
       newImage.src = image;
       newImage.onload = readyImg();
       window[image] = newImage;
+
+      waitForImageToLoad(newImage).then(() => {
+        // Image have loaded.
+        console.warn("Loaded lol", newImage.src);
+      });
+    });
+  }
+
+  function waitForImageToLoad(imageElement) {
+    return new Promise((resolve) => {
+      imageElement.onload = resolve;
     });
   }
 
