@@ -23,9 +23,13 @@ const Tests = () => {
         .then((response) => response.json())
         .then((jsonData) => {
           if (jsonData.workflow_runs.length > 0) {
-            setRun(jsonData.workflow_runs[0]);
-
-            fetchJob(jsonData.workflow_runs[0].jobs_url);
+            const testBuildDeploy = jsonData.workflow_runs.find((it) =>
+              it.name.includes("Build and Deploy")
+            );
+            if (testBuildDeploy) {
+              setRun(testBuildDeploy);
+              fetchJob(testBuildDeploy.jobs_url);
+            }
           }
         })
         .catch((error) => {
