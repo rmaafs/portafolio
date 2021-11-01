@@ -2,12 +2,14 @@ import React, { useEffect } from "react";
 
 import imgEuropa from "../../assets/europa.png";
 import imgPaisaje from "../../assets/yo_paisaje.png";
+import gorrito from "../../assets/gorro.png";
 
 const PreImageLoader = ({ onFinish }) => {
   const imagesPreload = [
     imgEuropa,
     "https://avatars.githubusercontent.com/u/47652130?s=300&u=e14efd0723cc525183525917bb108188e2cc1bde&v=4",
     imgPaisaje,
+    gorrito,
   ];
   let imagesLoaded = 0;
 

@@ -22,12 +22,6 @@ import PreImageLoader from "./PreImageLoader/PreImageLoader";
 const Main = () => {
   const [loaded, setLoaded] = useState(false); //¿La página ha sido cargada?
 
-  /*useEffect(() => {
-    setTimeout(() => {
-      setLoaded(true);
-    }, 3000);
-  });*/
-
   /**
    * Función que se ejecuta cuando termina de cachear las imágenes.
    */
