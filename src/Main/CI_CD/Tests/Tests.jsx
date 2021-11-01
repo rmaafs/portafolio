@@ -144,7 +144,7 @@ const getJob = (job, i) => {
 };
 
 function refactorLenght(txt) {
-  let length = 28;
+  let length = 26;
   if (txt.length > length) {
     return txt.substring(0, length) + "...";
   }
