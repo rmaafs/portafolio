@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import Colors from "../../Colors";
-import RepoComponent from "../Repositories/RepoComponent/RepoComponent";
+import RepoComponent from "./RepoComponent/RepoComponent";
 import ScrollAnimation from "react-animate-on-scroll";
 import "./Repositorios.css";
 import HelpIcon from "../HelpIcon";
@@ -22,10 +22,10 @@ const Repositorios = () => {
       let showThisRepos = [
         348843782, //alert-port-scanner
         319228785, //abecedarioSenas
-        352274008, //mpx-framework
+        408293276, //plantita
         339649900, //mapsflix
-        181842540, //Magalaxy
-        222047220, //Tienda
+        396491770, //crypt-me
+        408052818, //rmaafs-api
       ];
 
       const fetchRepos = () => {
