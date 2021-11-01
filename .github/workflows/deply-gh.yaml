@@ -1,4 +1,4 @@
-name: Build and Deploy
+name: 🚀 Build and Deploy
 on:
   push:
     branches:
@@ -42,7 +42,7 @@ jobs:
           echo "Se validará que no existan variables sin usar, console.logs, malos estándares de código, etc."
           npm run lint
 
-      - name: 📦 Build proyect
+      - name: 📦 Build proyecto
         env:
           CI: false
         run: |
