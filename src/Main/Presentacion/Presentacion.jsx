@@ -27,7 +27,7 @@ const Presentacion = () => {
         <div className="col-12 mt-4 mb-5">
           <span>👋 Hola, soy Rodrigo Maafs Atilano</span>
           <br />
-          <span>Estudiante de Ingeniería en Sistemas Computacionales</span>
+          <span>Ingeniero en Sistemas Computacionales</span>
 
           <div className="col-12 mt-4">
             <div className="row contact-list">

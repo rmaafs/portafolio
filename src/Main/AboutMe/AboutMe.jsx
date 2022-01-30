@@ -27,7 +27,7 @@ const AboutMe = () => {
             <br />
             <br />
             <span>
-              Estudio el último semestre en la{" "}
+              Soy Ingeniero en Sistemas Computacionales graduado en la{" "}
               <a
                 href="https://uaa.mx/"
                 target="_blank"
@@ -38,17 +38,17 @@ const AboutMe = () => {
               >
                 Benemérita Universidad Autónoma de Aguascalientes
               </a>
-              , y trabajo en una empresa de desarrollo de Sistemas Web y
-              aplicaciones móviles en{" "}
+              , y trabajo en una startup de BlockChain Gaming Loyalty Platform
+              llamada{" "}
               <a
-                href="https://appscamelot.com/"
+                href="https://www.linkedin.com/company/wonderblocks/"
                 target="_blank"
                 rel="noreferrer"
                 style={{
                   color: Colors.colors.primary_span,
                 }}
               >
-                Apps Camelot
+                WonderBlocks
               </a>
               .
             </span>
