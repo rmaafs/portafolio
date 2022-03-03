@@ -15,7 +15,7 @@ const Planetas = () => {
         <div className="mars"></div>
       </Tooltip>
 
-      <Tooltip title={"Jupiter"} arrow>
+      <Tooltip title={"Júpiter"} arrow>
         <div className="jupiter">
           <div className="luna1"></div>
           <div className="luna2"></div>
