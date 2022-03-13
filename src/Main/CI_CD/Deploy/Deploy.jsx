@@ -140,7 +140,8 @@ function timeSince(time) {
     format;
   while ((format = time_formats[i++]))
     if (seconds < format[0]) {
-      if (typeof format[2] === "string") return format[list_choice];
+      if (typeof format[2] === "string")
+        return token + " " + format[list_choice];
       else
         return token + " " + Math.floor(seconds / format[2]) + " " + format[1];
     }
