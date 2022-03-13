@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/portafolio/static/css/main.7e0ec64c.chunk.css",
-    "main.js": "/portafolio/static/js/main.d9bc8d02.chunk.js",
-    "main.js.map": "/portafolio/static/js/main.d9bc8d02.chunk.js.map",
-    "runtime-main.js": "/portafolio/static/js/runtime-main.c13eb0c1.js",
-    "runtime-main.js.map": "/portafolio/static/js/runtime-main.c13eb0c1.js.map",
-    "static/js/2.3e73e1ea.chunk.js": "/portafolio/static/js/2.3e73e1ea.chunk.js",
-    "static/js/2.3e73e1ea.chunk.js.map": "/portafolio/static/js/2.3e73e1ea.chunk.js.map",
-    "static/js/3.6dca5098.chunk.js": "/portafolio/static/js/3.6dca5098.chunk.js",
-    "static/js/3.6dca5098.chunk.js.map": "/portafolio/static/js/3.6dca5098.chunk.js.map",
-    "index.html": "/portafolio/index.html",
-    "static/css/main.7e0ec64c.chunk.css.map": "/portafolio/static/css/main.7e0ec64c.chunk.css.map",
-    "static/js/2.3e73e1ea.chunk.js.LICENSE.txt": "/portafolio/static/js/2.3e73e1ea.chunk.js.LICENSE.txt",
-    "static/media/ListItem.css": "/portafolio/static/media/react.e68b35f4.svg",
-    "static/media/Presentacion.css": "/portafolio/static/media/europa.36a99cd7.png",
-    "static/media/gorro.fe8039a5.png": "/portafolio/static/media/gorro.fe8039a5.png",
-    "static/media/yo_paisaje.0263843d.png": "/portafolio/static/media/yo_paisaje.0263843d.png"
+    "main.css": "/static/css/main.6ebb0901.chunk.css",
+    "main.js": "/static/js/main.96abce3d.chunk.js",
+    "main.js.map": "/static/js/main.96abce3d.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.c8a000a0.js",
+    "runtime-main.js.map": "/static/js/runtime-main.c8a000a0.js.map",
+    "static/js/2.4f439920.chunk.js": "/static/js/2.4f439920.chunk.js",
+    "static/js/2.4f439920.chunk.js.map": "/static/js/2.4f439920.chunk.js.map",
+    "static/js/3.6dca5098.chunk.js": "/static/js/3.6dca5098.chunk.js",
+    "static/js/3.6dca5098.chunk.js.map": "/static/js/3.6dca5098.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.6ebb0901.chunk.css.map": "/static/css/main.6ebb0901.chunk.css.map",
+    "static/js/2.4f439920.chunk.js.LICENSE.txt": "/static/js/2.4f439920.chunk.js.LICENSE.txt",
+    "static/media/ListItem.css": "/static/media/react.e68b35f4.svg",
+    "static/media/Presentacion.css": "/static/media/europa.36a99cd7.png",
+    "static/media/gorro.fe8039a5.png": "/static/media/gorro.fe8039a5.png",
+    "static/media/yo_paisaje.0263843d.png": "/static/media/yo_paisaje.0263843d.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.c13eb0c1.js",
-    "static/js/2.3e73e1ea.chunk.js",
-    "static/css/main.7e0ec64c.chunk.css",
-    "static/js/main.d9bc8d02.chunk.js"
+    "static/js/runtime-main.c8a000a0.js",
+    "static/js/2.4f439920.chunk.js",
+    "static/css/main.6ebb0901.chunk.css",
+    "static/js/main.96abce3d.chunk.js"
   ]
 }
