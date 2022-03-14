@@ -12,7 +12,10 @@
       "recommend_song": "Recomendar canción",
       "label_artist": "Canción o artista...",
       "adding": "Agregando...",
-      "song_successfull": "Tu canción será la próxima en escucharse. ¡Gracias!"
+      "song_successfull": "Tu canción será la próxima en escucharse. ¡Gracias!",
+      "no_listen": {
+        "no_listening": "Por ahora no estoy escuchando nada."
+      }
     }
   }
 }
