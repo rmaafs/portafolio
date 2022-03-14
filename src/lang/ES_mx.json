@@ -2,6 +2,11 @@
   "principal": {
     "hello": "👋 Hola, soy Rodrigo Maafs Atilano",
     "occupation": "Ingeniero en Sistemas Computacionales",
+    "planets": {
+      "earth": "Tierra",
+      "mars": "Marte",
+      "jupiter": "Júpiter"
+    },
     "spotify": {
       "what_im_listening": "¿Qué estoy escuchando en este momento?",
       "recommend_song": "Recomendar canción",

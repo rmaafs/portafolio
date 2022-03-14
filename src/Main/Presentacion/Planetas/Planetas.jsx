@@ -1,21 +1,24 @@
+import React, { useContext } from "react";
 import Tooltip from "@material-ui/core/Tooltip";
-import React from "react";
+import { useLanguage } from "../../../hooks/LanguageContext/useLanguageContext";
 import "./Planetas.css";
 
 const Planetas = () => {
+  const { lang } = useContext(useLanguage);
+
   return (
     <div id="orbits">
-      <Tooltip title={"Tierra"} arrow>
+      <Tooltip title={lang.principal.planets.earth} arrow>
         <div className="hearth">
           <div className="luna"></div>
         </div>
       </Tooltip>
 
-      <Tooltip title={"Marte"} arrow>
+      <Tooltip title={lang.principal.planets.mars} arrow>
         <div className="mars"></div>
       </Tooltip>
 
-      <Tooltip title={"Júpiter"} arrow>
+      <Tooltip title={lang.principal.planets.jupiter} arrow>
         <div className="jupiter">
           <div className="luna1"></div>
           <div className="luna2"></div>
