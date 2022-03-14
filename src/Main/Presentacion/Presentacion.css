@@ -57,3 +57,27 @@
 .fa-facebook:hover {
   color: #1a73ea !important;
 }
+
+.banderas {
+  justify-content: center;
+  margin: 0px;
+  padding: 0px;
+}
+
+.bandera {
+  max-width: 100px;
+}
+
+.bandera img {
+  width: 32px;
+}
+
+.bandera legend {
+  font-size: 12px;
+}
+
+.bandera :hover,
+.bandera img:hover {
+  color: #febaff;
+  cursor: pointer;
+}

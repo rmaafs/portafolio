@@ -1,16 +1,33 @@
-import React from "react";
+import React, { useContext } from "react";
+import { useLanguage } from "../../hooks/LanguageContext/useLanguageContext";
 import ContactComponent from "../LeftSidebar/ContactComponent/ContactComponent";
 import Spotify from "../Spotify/Spotify";
 import Gorrito from "./Gorrito/Gorrito";
 import Planetas from "./Planetas/Planetas";
 import "./Presentacion.css";
+import imgUs from "../../assets/lang/EN_us.png";
+import imgEs from "../../assets/lang/ES_mx.png";
 
 const Presentacion = () => {
+  const { lang, updateLang } = useContext(useLanguage);
   const isNavidad = new Date().getMonth() + 1 === 12;
+
+  const Bandera = ({ image, title, lang }) => {
+    return (
+      <div className="col-6 bandera" onClick={() => updateLang(lang)}>
+        <img src={image} />
+        <legend>{title}</legend>
+      </div>
+    );
+  };
 
   return (
     <div className="col-12 presentacion">
       <div className="row">
+        <div className="row col-12 banderas">
+          <Bandera image={imgUs} title="English" lang="EN_us" />
+          <Bandera image={imgEs} title="Español" lang="ES_mx" />
+        </div>
         <div className="col-12">
           <Planetas />
 
@@ -25,9 +42,9 @@ const Presentacion = () => {
         </div>
 
         <div className="col-12 mt-4 mb-5">
-          <span>👋 Hola, soy Rodrigo Maafs Atilano</span>
+          <span>{lang.principal.hello}</span>
           <br />
-          <span>Ingeniero en Sistemas Computacionales</span>
+          <span>{lang.principal.occupation}</span>
 
           <div className="col-12 mt-4">
             <div className="row contact-list">

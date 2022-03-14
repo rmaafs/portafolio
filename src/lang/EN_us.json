@@ -1,0 +1,13 @@
+{
+  "principal": {
+    "hello": "👋 Hi, I'm Rodrigo Maafs Atilano",
+    "occupation": "Computer Systems Engineer",
+    "spotify": {
+      "what_im_listening": "What song I'm listening now?",
+      "recommend_song": "Recomendar canción",
+      "label_artist": "Canción o artista...",
+      "adding": "Agregando...",
+      "song_successfull": "Tu canción será la próxima en escucharse. ¡Gracias!"
+    }
+  }
+}

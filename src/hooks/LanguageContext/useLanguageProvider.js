@@ -1,19 +1,24 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useLanguage } from "./useLanguageContext";
+import defaultLang from "../../lang/EN_us.json";
 
 const LanguageProvider = ({ children }) => {
-  const [lang, setLang] = useState("EN_es");
+  const [langName, setLangName] = useState("ES_mx");
+  const [lang, setLang] = useState(defaultLang);
 
-  useEffect(() => {
-    console.warn("Works");
-  }, []);
+  function updateLang(newLang) {
+    setLangName(newLang);
+    const file = require("../../lang/" + newLang + ".json");
+    setLang(file);
+  }
 
   const { Provider } = useLanguage;
   return (
     <Provider
       value={{
         lang,
-        setLang,
+        langName,
+        updateLang,
       }}
     >
       {children}
