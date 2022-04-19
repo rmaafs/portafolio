@@ -34,16 +34,19 @@ const Spotify = () => {
   const NoEscuchando = () => {
     return (
       <div className="sp-title">
-        Por ahora no estoy escuchando nada.
-        <br />
-        Vuelve pronto y mira la magia 😊
-        <br />
+        {language.no_listen.no_listening.map((line, i) => (
+          <Fragment key={i}>
+            {line}
+            <br />
+          </Fragment>
+        ))}
+
         <a
           href="https://github.com/rmaafs/portafolio/pull/22#issuecomment-946394957"
           target="_blank"
           rel="noreferrer"
         >
-          Click para ver una imagen de demostración
+          {language.no_listen.see_demostration}
         </a>
       </div>
     );

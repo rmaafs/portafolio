@@ -9,14 +9,17 @@
     },
     "spotify": {
       "what_im_listening": "What song I'm listening now?",
-      "recommend_song": "Recomendar canción",
-      "label_artist": "Canción o artista...",
-      "adding": "Agregando...",
-      "song_successfull": "Tu canción será la próxima en escucharse. ¡Gracias!",
-      "description": "Te muestro la canción que estoy escuchando justo en este momento en Spotify.\nEste componente lo hice yo mismo desde 0 😄\n\nUso la API de Spotify y se conecta con mi\npropia API REST.\n\n🔅 Una API REST, en pocas palabras es tener un acceso controlado a las bases de datos o recursos de algún proyecto.",
+      "recommend_song": "Recommend song",
+      "label_artist": "Song or artist...",
+      "adding": "Adding...",
+      "song_successfull": "Your song will be the next to be heard, thank you!",
+      "description": "🔅 My own API connected with the Spotify API.",
       "no_listen": {
-        "no_listening": "Por ahora no estoy escuchando nada.\nVuelve pronto y mira la magia 😊",
-        "see_demostration": "Click para ver una imagen de demostración"
+        "no_listening": [
+          "I'm not listening any song right now.",
+          "Comeback soon 😊"
+        ],
+        "see_demostration": "Click to see a demostration"
       }
     }
   }
