@@ -12,6 +12,7 @@
       "recommend_song": "Recommend song",
       "label_artist": "Song or artist...",
       "adding": "Adding...",
+      "searching": "Searching...",
       "song_successfull": "Your song will be the next to be heard, thank you!",
       "description": "🔅 My own API connected with the Spotify API.",
       "no_listen": {
