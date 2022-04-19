@@ -34,7 +34,7 @@ const Repositorios = () => {
         319228785, //abecedarioSenas
         408293276, //plantita
         339649900, //mapsflix
-        396491770, //crypt-me
+        469524832, //crypt-me-front
         408052818, //rmaafs-api
       ];
 
