@@ -3,7 +3,7 @@ import { useLanguage } from "./useLanguageContext";
 import defaultLang from "../../lang/EN_us.json";
 
 const LanguageProvider = ({ children }) => {
-  const [langName, setLangName] = useState("ES_mx");
+  const [langName, setLangName] = useState("EN_us");
   const [lang, setLang] = useState(defaultLang);
 
   function updateLang(newLang) {

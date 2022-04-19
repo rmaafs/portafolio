@@ -45,5 +45,28 @@
       "Basically, a social network for programmers 🤓."
     ],
     "repos_dont_found": "No repositories found."
+  },
+  "cicd": {
+    "description": "I'm passionate about the DevOps culture: doing difficult work in an automated way.",
+    "code": "From the code...",
+    "commits_not_found": "Commits not found.",
+    "tests": "Tests (CI) in each push...",
+    "jobs_not_found": "Jobs/Tests not found.",
+    "deploy": "And deploy (CD) in my server...",
+    "deploy_not_found": "Deployments not found.",
+    "more_commits": "and other commits...",
+    "more_deploys": "and other deploys...",
+    "tooltip": [
+      "CI o Continuous Integration:",
+      "Baiscally, it means that the code that a programmer made, goes through a list of automatic tests before being able to take his changes to the code used by customers (production) in the product.",
+      "",
+      "CD o Continuous Delivery:",
+      "Basically, it refers to bringing new changes automatically to production (commonly to the server) so that clients can consume them..",
+      "",
+      "To \"CI & CD\" it's called culture \"DevOps\"",
+      "- The programmer writes code.",
+      "- Your code is tested so that it does not affect the product.",
+      "- Your changes are integrated into production."
+    ]
   }
 }
