@@ -68,5 +68,10 @@
       "- Your code is tested so that it does not affect the product.",
       "- Your changes are integrated into production."
     ]
+  },
+  "footer": {
+    "love": "Made with ",
+    "by": " by Rodrigo Maafs Atilano",
+    "inspired": "Inspired by "
   }
 }

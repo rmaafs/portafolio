@@ -69,5 +69,10 @@
       "- Se prueba su código para que no afecte el producto.",
       "- Se integran sus cambios a producción."
     ]
+  },
+  "footer": {
+    "love": "Hecho con ",
+    "by": " por Rodrigo Maafs Atilano",
+    "inspired": "Inspirado por "
   }
 }
