@@ -75,8 +75,8 @@ const Presentacion = () => {
               />
               <ContactComponent
                 type="email"
-                link="mailto:rodrigoelmaps@gmail.com"
-                title="Gmail"
+                link="mailto:contact@rmaafs.com"
+                title="Email"
               />
             </div>
           </div>

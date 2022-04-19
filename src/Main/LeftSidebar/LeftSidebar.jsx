@@ -51,13 +51,13 @@ const LeftSidebar = () => {
           />
           <ContactComponent
             type="email"
-            link="mailto:rodrigoelmaps@gmail.com"
-            username="rodrigoelmaps@gmail.com"
+            link="mailto:contact@rmaafs.com"
+            username="contact@rmaafs.com"
           />
           <ContactComponent
             type="email"
-            link="mailto:rodrigo@appscamelot.com"
-            username="rodrigo@appscamelot.com"
+            link="mailto:contact@rmaafs.com"
+            username="contact@rmaafs.com"
           />
           <ContactComponent type="map" username="Jalisco, México" />
           <ContactComponent type="map" username="localhost" />
