@@ -33,5 +33,17 @@
       "WonderBlocks"
     ],
     "techs": "Today I work personally and profesionally with:"
+  },
+  "repositories": {
+    "title": "Repositories",
+    "description": "Some repositories of my ",
+    "tooltip": [
+      "The repositories are some of my work and projects I have done.",
+      "If you are a developer, you can consult the source code.",
+      "",
+      "GitHub is a site where many developers share their code with the community.",
+      "Basically, a social network for programmers 🤓."
+    ],
+    "repos_dont_found": "No repositories found."
   }
 }

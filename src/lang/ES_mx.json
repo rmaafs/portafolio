@@ -34,5 +34,17 @@
       "."
     ],
     "techs": "Actualmente trabajo personal y profesionalmente con:"
+  },
+  "repositories": {
+    "title": "Repositorios",
+    "description": "Algunos de mis repositorios en ",
+    "tooltip": [
+      "Los repositorios son algunos de mis trabajos y proyectos que he realizado.",
+      "Si eres desarrollador, puedes consultar el código fuente.",
+      "",
+      "GitHub es una página donde muchos desarrolladores comparten su código con la comunidad.",
+      "En pocas palabras, una red social para programadores 🤓"
+    ],
+    "repos_dont_found": "No se encontraron repositorios."
   }
 }
