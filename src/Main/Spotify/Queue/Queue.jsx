@@ -1,11 +1,16 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useContext, useState } from "react";
 import Buscador from "./Buscador/Buscador";
+import { useLanguage } from "../../../hooks/LanguageContext/useLanguageContext";
 import "./Queue.css";
 
 const Queue = () => {
+  const { lang } = useContext(useLanguage);
+
   const [buscando, setBuscando] = useState(false);
   const [elegido, setElegido] = useState(false);
   const [msgError, setMsgError] = useState("");
+
+  const language = lang.principal.spotify;
 
   const handleOnChoose = () => {
     setMsgError("");
@@ -29,7 +34,7 @@ const Queue = () => {
     return (
       <div className="recomendar" onClick={() => setBuscando(true)}>
         <i className={"fa fa-plus fa-fw mr-2 v-align-middle"}></i>
-        Recomendar canción
+        {language.recommend_song}
       </div>
     );
   };
@@ -45,9 +50,7 @@ const Queue = () => {
           }
         ></i>
         {msgError === "" ? (
-          <Fragment>
-            Tu canción será la próxima en escucharse. ¡Gracias!
-          </Fragment>
+          <Fragment>{language.song_successfull}</Fragment>
         ) : (
           <Fragment>{msgError}</Fragment>
         )}

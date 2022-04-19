@@ -1,4 +1,4 @@
-name: 🏷 Auto-etiquetado
+name: 🏷 Auto labeler
 on:
   pull_request:
     types: [opened]
@@ -7,7 +7,7 @@ jobs:
   pr-labeler:
     runs-on: ubuntu-latest
     steps:
-      - name: "🤖 Auto etiquetar pull request"
+      - name: "🤖 Auto label Pull Request"
         uses: TimonVS/pr-labeler-action@v3
         with:
           configuration-path: .github/pr-labeler.yml

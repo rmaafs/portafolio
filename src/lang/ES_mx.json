@@ -1,0 +1,78 @@
+{
+  "principal": {
+    "hello": "👋 Hola, soy Rodrigo Maafs Atilano",
+    "occupation": "Ingeniero en Sistemas Computacionales",
+    "planets": {
+      "earth": "Tierra",
+      "mars": "Marte",
+      "jupiter": "Júpiter"
+    },
+    "spotify": {
+      "what_im_listening": "¿Qué estoy escuchando en este momento?",
+      "recommend_song": "Recomendar canción",
+      "label_artist": "Canción o artista...",
+      "adding": "Agregando...",
+      "searching": "Buscando...",
+      "song_successfull": "Tu canción será la próxima en escucharse. ¡Gracias!",
+      "description": "🔅 Mi propia API conectada con la API de Spotify.",
+      "no_listen": {
+        "no_listening": [
+          "Por ahora no estoy escuchando nada.",
+          "Vuelve pronto y mira la magia 😊"
+        ],
+        "see_demostration": "Click para ver una imagen de demostración"
+      }
+    }
+  },
+  "aboutme": {
+    "description": "Me gusta la tecnología en general. Desde el Frontend, hasta la cultura DevOps y encargarme de la seguridad del Backend. ¡Me gusta la inovación!",
+    "experience": [
+      "Soy Ingeniero en Sistemas Computacionales graduado en la ",
+      "Benemérita Universidad Autónoma de Aguascalientes",
+      ", y trabajo en una startup de BlockChain Gaming Loyalty Platform llamada ",
+      "WonderBlocks",
+      "."
+    ],
+    "techs": "Actualmente trabajo personal y profesionalmente con:"
+  },
+  "repositories": {
+    "title": "Repositorios",
+    "description": "Algunos de mis repositorios en ",
+    "tooltip": [
+      "Los repositorios son algunos de mis trabajos y proyectos que he realizado.",
+      "Si eres desarrollador, puedes consultar el código fuente.",
+      "",
+      "GitHub es una página donde muchos desarrolladores comparten su código con la comunidad.",
+      "En pocas palabras, una red social para programadores 🤓"
+    ],
+    "repos_dont_found": "No se encontraron repositorios."
+  },
+  "cicd": {
+    "description": "Me apasiona la cultura DevOps: hacer el trabajo difícil de forma automatizada.",
+    "code": "Desde el código...",
+    "commits_not_found": "No se encontraron commits.",
+    "tests": "Los tests (CI) en cada push...",
+    "jobs_not_found": "No se encontraron jobs.",
+    "deploy": "Y el deploy (CD) en mi servidor...",
+    "deploy_not_found": "No se encontraron deploys.",
+    "more_commits": "y otros commits más...",
+    "more_deploys": "y otros deploys más...",
+    "tooltip": [
+      "CI o Continuous Integration:",
+      "Resumidamente se refiere a que el código que hizo un programador, pase por una lista de pruebas automáticas antes de poder llevar sus cambios al código que utilizan los clientes (producción) en el producto.",
+      "",
+      "CD o Continuous Delivery:",
+      "Resumidamente se refiere a llevar los nuevos cambios automáticamente a producción (comúnmente al servidor) para que los clientes puedan consumirlo.",
+      "",
+      "A \"CI & CD\" se le llama cultura \"DevOps\"",
+      "- El programador escribe código.",
+      "- Se prueba su código para que no afecte el producto.",
+      "- Se integran sus cambios a producción."
+    ]
+  },
+  "footer": {
+    "love": "Hecho con ",
+    "by": " por Rodrigo Maafs Atilano",
+    "inspired": "Inspirado por "
+  }
+}

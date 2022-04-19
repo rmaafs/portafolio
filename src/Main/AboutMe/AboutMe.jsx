@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
+import { useLanguage } from "../../hooks/LanguageContext/useLanguageContext";
 import "./AboutMe.css";
 import yo_paisaje from "../../assets/yo_paisaje.png";
 import Colors from "../../Colors";
 import ListItem from "./ListItemComponent/ListItem";
 
 const AboutMe = () => {
+  const { lang } = useContext(useLanguage);
+  const language = lang.aboutme;
+
   return (
     <div className="col-12 aboutme">
       <div className="row">
@@ -19,15 +23,11 @@ const AboutMe = () => {
               paddingTop: 20,
             }}
           >
-            <span>
-              Me gusta la tecnología en general. Desde el FrontEnd, hasta la
-              cultura DevOps y encargarme de la seguridad. ¡Me gusta la
-              inovación!
-            </span>
+            <span>{language.description}</span>
             <br />
             <br />
             <span>
-              Soy Ingeniero en Sistemas Computacionales graduado en la{" "}
+              {language.experience[0]}
               <a
                 href="https://uaa.mx/"
                 target="_blank"
@@ -36,10 +36,9 @@ const AboutMe = () => {
                   color: Colors.colors.primary_span,
                 }}
               >
-                Benemérita Universidad Autónoma de Aguascalientes
+                {language.experience[1]}
               </a>
-              , y trabajo en una startup de BlockChain Gaming Loyalty Platform
-              llamada{" "}
+              {language.experience[2]}
               <a
                 href="https://www.linkedin.com/company/wonderblocks/"
                 target="_blank"
@@ -48,14 +47,14 @@ const AboutMe = () => {
                   color: Colors.colors.primary_span,
                 }}
               >
-                WonderBlocks
+                {language.experience[3]}
               </a>
               .
             </span>
             <br />
             <br />
             <span>
-              Actualmente trabajo personal y profesionalmente con:
+              {language.techs}
               <ul>
                 <ListItem
                   text="C++"

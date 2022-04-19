@@ -1,4 +1,11 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, {
+  useEffect,
+  useState,
+  useRef,
+  useContext,
+  Fragment,
+} from "react";
+import { useLanguage } from "../../hooks/LanguageContext/useLanguageContext";
 import Colors from "../../Colors";
 import RepoComponent from "./RepoComponent/RepoComponent";
 import ScrollAnimation from "react-animate-on-scroll";
@@ -14,6 +21,9 @@ export function useFirstRender() {
 }
 
 const Repositorios = () => {
+  const { lang } = useContext(useLanguage);
+  const language = lang.repositories;
+
   const firstRender = useFirstRender();
   const [repos, setRepos] = useState([]);
 
@@ -50,18 +60,14 @@ const Repositorios = () => {
     <ScrollAnimation animateIn="animate__fadeIn" offset={350}>
       <div className="col-xs-12 col-md-6 no-padding repositorios">
         <h1 className="numbered-heading">
-          <span>Repositorios</span>
+          <span>{language.title}</span>
           <HelpIcon>
-            Los repositorios son algunos de mis trabajos y proyectos que he
-            realizado.
-            <br />
-            Si eres desarrollador, puedes consultar el código fuente.
-            <br />
-            <br />
-            GitHub es una página donde muchos desarrolladores comparten su
-            código con la comunidad.
-            <br />
-            En pocas palabras, una red social para programadores 🤓
+            {language.tooltip.map((line, i) => (
+              <Fragment key={i}>
+                {line}
+                <br />
+              </Fragment>
+            ))}
           </HelpIcon>
         </h1>
       </div>
@@ -74,7 +80,7 @@ const Repositorios = () => {
       >
         {repos.length > 0 ? (
           <span>
-            Algunos de mis repositorios en{" "}
+            {language.description}
             <a
               href="https://github.com/rmaafs"
               rel="noreferrer"
@@ -97,9 +103,7 @@ const Repositorios = () => {
               return [<RepoComponent key={i} repo={repo} />];
             })
           ) : (
-            <span style={{ paddingLeft: 16 }}>
-              No se encontraron repositorios.
-            </span>
+            <span style={{ paddingLeft: 16 }}>{language.repos_dont_found}</span>
           )}
         </div>
       </div>

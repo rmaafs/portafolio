@@ -1,0 +1,77 @@
+{
+  "principal": {
+    "hello": "👋 Hi, I'm Rodrigo Maafs Atilano",
+    "occupation": "Computer Systems Engineer",
+    "planets": {
+      "earth": "Earth",
+      "mars": "Mars",
+      "jupiter": "Jupiter"
+    },
+    "spotify": {
+      "what_im_listening": "What song I'm listening now?",
+      "recommend_song": "Recommend song",
+      "label_artist": "Song or artist...",
+      "adding": "Adding...",
+      "searching": "Searching...",
+      "song_successfull": "Your song will be the next to be heard, thank you!",
+      "description": "🔅 My own API connected with the Spotify API.",
+      "no_listen": {
+        "no_listening": [
+          "I'm not listening any song right now.",
+          "Comeback soon 😊"
+        ],
+        "see_demostration": "Click to see a demostration"
+      }
+    }
+  },
+  "aboutme": {
+    "description": "I like all the technology. Starting from Frontend and ending up using DevOps culture, taking care the security for the Backend. I love innovation!",
+    "experience": [
+      "I'm a Systems Computer Engineer from the ",
+      "Benemérita Universidad Autónoma de Aguascalientes",
+      ", and actually I'm working in a BlockChain Gaming Loyalty Platform Startup called ",
+      "WonderBlocks"
+    ],
+    "techs": "Today I work personally and profesionally with:"
+  },
+  "repositories": {
+    "title": "Repositories",
+    "description": "Some repositories of my ",
+    "tooltip": [
+      "The repositories are some of my work and projects I have done.",
+      "If you are a developer, you can consult the source code.",
+      "",
+      "GitHub is a site where many developers share their code with the community.",
+      "Basically, a social network for programmers 🤓."
+    ],
+    "repos_dont_found": "No repositories found."
+  },
+  "cicd": {
+    "description": "I'm passionate about the DevOps culture: doing difficult work in an automated way.",
+    "code": "From the code...",
+    "commits_not_found": "Commits not found.",
+    "tests": "Tests (CI) in each push...",
+    "jobs_not_found": "Jobs/Tests not found.",
+    "deploy": "And deploy (CD) in my server...",
+    "deploy_not_found": "Deployments not found.",
+    "more_commits": "and other commits...",
+    "more_deploys": "and other deploys...",
+    "tooltip": [
+      "CI o Continuous Integration:",
+      "Baiscally, it means that the code that a programmer made, goes through a list of automatic tests before being able to take his changes to the code used by customers (production) in the product.",
+      "",
+      "CD o Continuous Delivery:",
+      "Basically, it refers to bringing new changes automatically to production (commonly to the server) so that clients can consume them..",
+      "",
+      "To \"CI & CD\" it's called culture \"DevOps\"",
+      "- The programmer writes code.",
+      "- Your code is tested so that it does not affect the product.",
+      "- Your changes are integrated into production."
+    ]
+  },
+  "footer": {
+    "love": "Made with ",
+    "by": " by Rodrigo Maafs Atilano",
+    "inspired": "Inspired by "
+  }
+}

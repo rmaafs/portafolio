@@ -1,10 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import { useLanguage } from "../../../hooks/LanguageContext/useLanguageContext";
 import ScrollAnimation from "react-animate-on-scroll";
 import "./Tests.css";
 
 const Tests = () => {
+  const { lang } = useContext(useLanguage);
   const [run, setRun] = useState({});
   const [jobs, setJobs] = useState([]);
+
+  const language = lang.cicd;
 
   useEffect(() => {
     const fetchJob = (url) => {
@@ -43,7 +47,7 @@ const Tests = () => {
   return (
     <div className="col-12 col-md-4 mt-8">
       <ScrollAnimation animateIn="animate__fadeIn" offset={0}>
-        <span className="span-row">Los tests (CI) en cada push...</span>
+        <span className="span-row">{language.tests}</span>
 
         <div className="col-12 ci-cd-tests mt-2">
           {run.conclusion === "success" ? (
@@ -88,7 +92,7 @@ const Tests = () => {
                 return [getJob(job, i)];
               })
             ) : (
-              <span style={{ paddingLeft: 16 }}>No se encontraron jobs.</span>
+              <span style={{ paddingLeft: 16 }}>{language.jobs_not_found}</span>
             )}
           </ul>
         </div>

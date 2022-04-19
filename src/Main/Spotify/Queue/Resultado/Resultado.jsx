@@ -1,15 +1,19 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useContext, useState } from "react";
 import AnimationLoader from "./Loading/AnimationLoader";
+import { useLanguage } from "../../../../hooks/LanguageContext/useLanguageContext";
 import "./Resultado.css";
 
 const Resultado = ({ track, loading, onChoose }) => {
-  const [palabra, setPalabra] = useState("Buscando...");
+  const { lang } = useContext(useLanguage);
+  const language = lang.principal.spotify;
+
+  const [palabra, setPalabra] = useState(language.searching);
 
   const handleClick = async () => {
     if (!loading && track) {
-      setPalabra("Agregando...");
+      setPalabra(language.adding);
       await onChoose();
-      setPalabra("Buscando...");
+      setPalabra(language.searching);
     }
   };
 

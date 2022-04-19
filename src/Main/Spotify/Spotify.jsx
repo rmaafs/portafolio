@@ -1,4 +1,5 @@
-import React, { Fragment, useEffect, useState } from "react";
+import React, { Fragment, useEffect, useState, useContext } from "react";
+import { useLanguage } from "../../hooks/LanguageContext/useLanguageContext";
 import HelpIcon from "../HelpIcon";
 import Card from "./Card/Card";
 import Queue from "./Queue/Queue";
@@ -7,7 +8,9 @@ import "./Spotify.css";
 const Spotify = () => {
   const URL = "https://api.rmaafs.com/spotify/current-track";
 
+  const { lang } = useContext(useLanguage);
   const [track, setTrack] = useState({});
+  const language = lang.principal.spotify;
 
   const fetchData = async () => {
     return new Promise((resolve, reject) => {
@@ -31,16 +34,19 @@ const Spotify = () => {
   const NoEscuchando = () => {
     return (
       <div className="sp-title">
-        Por ahora no estoy escuchando nada.
-        <br />
-        Vuelve pronto y mira la magia 😊
-        <br />
+        {language.no_listen.no_listening.map((line, i) => (
+          <Fragment key={i}>
+            {line}
+            <br />
+          </Fragment>
+        ))}
+
         <a
           href="https://github.com/rmaafs/portafolio/pull/22#issuecomment-946394957"
           target="_blank"
           rel="noreferrer"
         >
-          Click para ver una imagen de demostración
+          {language.no_listen.see_demostration}
         </a>
       </div>
     );
@@ -53,21 +59,9 @@ const Spotify = () => {
   return (
     <div className="sp-container">
       <div className="sp-title row">
-        ¿Qué estoy escuchando en este momento?{" "}
+        {language.what_im_listening}{" "}
         <HelpIcon style={{ bottom: null, paddingLeft: "5px" }}>
-          Te muestro la canción que estoy escuchando justo en este momento en
-          Spotify.
-          <br />
-          Este componente lo hice yo mismo desde 0 😄
-          <br />
-          <br />
-          Uso la API de Spotify y se conecta con mi
-          <br />
-          propia API REST.
-          <br />
-          <br />
-          🔅 Una API REST, en pocas palabras es tener un acceso controlado a las
-          bases de datos o recursos de algún proyecto.
+          {language.description}
         </HelpIcon>
       </div>
 

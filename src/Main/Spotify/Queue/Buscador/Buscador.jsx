@@ -1,11 +1,16 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Resultado from "../Resultado/Resultado";
+import { useLanguage } from "../../../../hooks/LanguageContext/useLanguageContext";
 import "./Buscador.css";
 
 const Buscador = ({ onClose, onChoose, onError }) => {
+  const { lang } = useContext(useLanguage);
+
   const [loading, setLoading] = useState(false);
   const [text, setText] = React.useState(""); //Timer para esperar cuando escriba algo
   const [track, setTrack] = React.useState(undefined);
+
+  const language = lang.principal.spotify;
 
   /**
    * Esta funcionalidad lo que hará es, cuando deje de escribir,
@@ -73,7 +78,7 @@ const Buscador = ({ onClose, onChoose, onError }) => {
       <div className="buscador">
         <input
           type="text"
-          placeholder="Canción o artista..."
+          placeholder={language.label_artist}
           onChange={handleOnChange}
         />
         <i
