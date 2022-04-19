@@ -11,34 +11,38 @@ jobs:
         node-version: [12.x]
 
     steps:
-      - name: 🔽 Descargar proyecto
+      - name: 🔽 Download project
         uses: actions/checkout@v2
         with:
           persist-credential: false
 
-      - name: 🏠 Instalar Node.js ${{ matrix.node-version }}
+      - name: 🏠 Install Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: 👷‍♂️ Instalar dependencias
+      - name: 👷‍♂️ Install dependencies
         run: |
           npm ci
-      - name: 🔅 Sintaxis estándar prettier
+
+      - name: 🔅 Prettier, Code Syntax Standard
         run: |
           echo "Recuerda tener instalado Prettier como formateador de código en tu Editor de texto"
           echo "Este código usará como estándar la indentación de Prettier."
           echo "Para solucionar tu indentación, ejecuta npm run sintax:fix"
           npm run sintax:test
-      - name: 👀 Estándares del proyecto
+
+      - name: 👀 Project Standards
         run: |
           npm test
-      - name: 👀 Calidad del código
+
+      - name: 👀 Code Quality
         run: |
           echo "Se revisará la calidad del código para que la consola no tenga warnings ni errores."
           echo "Se validará que no existan variables sin usar, console.logs, malos estándares de código, etc."
           npm run lint
-      - name: 📦 Build proyecto
+
+      - name: 📦 Build project
         env:
           CI: false
         run: |
