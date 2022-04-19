@@ -23,5 +23,16 @@
         "see_demostration": "Click para ver una imagen de demostración"
       }
     }
+  },
+  "aboutme": {
+    "description": "Me gusta la tecnología en general. Desde el Frontend, hasta la cultura DevOps y encargarme de la seguridad del Backend. ¡Me gusta la inovación!",
+    "experience": [
+      "Soy Ingeniero en Sistemas Computacionales graduado en la ",
+      "Benemérita Universidad Autónoma de Aguascalientes",
+      ", y trabajo en una startup de BlockChain Gaming Loyalty Platform llamada ",
+      "WonderBlocks",
+      "."
+    ],
+    "techs": "Actualmente trabajo personal y profesionalmente con:"
   }
 }

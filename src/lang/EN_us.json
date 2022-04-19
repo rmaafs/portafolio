@@ -23,5 +23,15 @@
         "see_demostration": "Click to see a demostration"
       }
     }
+  },
+  "aboutme": {
+    "description": "I like all the technology. Starting from Frontend and ending up using DevOps culture, taking care the security for the Backend. I love innovation!",
+    "experience": [
+      "I'm a Systems Computer Engineer from the ",
+      "Benemérita Universidad Autónoma de Aguascalientes",
+      ", and actually I'm working in a BlockChain Gaming Loyalty Platform Startup called ",
+      "WonderBlocks"
+    ],
+    "techs": "Today I work personally and profesionally with:"
   }
 }
