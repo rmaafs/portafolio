@@ -7,11 +7,7 @@ const HeartRate = () => {
   const { lang, langName } = useContext(useLanguage);
   const [rate, setRate] = useState(undefined);
   const [time, setTime] = useState(undefined);
-  const [velocity, setVelocity] = useState("1.2");
-
-  /**
-   * 80 = 1.2
-   */
+  const [velocity, setVelocity] = useState("1.0");
 
   const language = lang.principal.heart;
 
@@ -27,7 +23,20 @@ const HeartRate = () => {
           const time = Number(json.time.substring(0, 13));
           setRate(json.value);
           setTime(time);
-          setVelocity("1.2");
+
+          if (json.value >= 150) {
+            setVelocity("0.4");
+          } else if (json.value >= 120) {
+            setVelocity("0.5");
+          } else if (json.value >= 100) {
+            setVelocity("0.6");
+          } else if (json.value >= 80) {
+            setVelocity("0.8");
+          } else if (json.value >= 60) {
+            setVelocity("1.0");
+          } else {
+            setVelocity("1.3");
+          }
         }
       })
       .catch((err) => {
@@ -35,39 +44,46 @@ const HeartRate = () => {
       });
   };
 
-  if (rate === undefined) return <div></div>;
-
   return (
     <div className="col-12" style={{ position: "relative" }}>
       <div className="heart-container">
-        <div className="heart-rate">
-          <HelpIcon
-            style={{
-              bottom: null,
-              paddingLeft: "5px",
-              top: "-6px",
-              right: "-26px",
-              position: "absolute",
-            }}
-          >
-            {language.map((line, i) => (
-              <Fragment key={i}>
-                {line.includes("{LAST_UPDATE}")
-                  ? line.replaceAll(
-                      "{LAST_UPDATE}",
-                      timeSince(time, langName === "EN_us")
-                    )
-                  : line}
-                <br />
-              </Fragment>
-            ))}
-          </HelpIcon>
-          <div
-            className="heart"
-            style={{ animation: "animateHeart " + velocity + "s infinite" }}
-          >
-            <div className="rate-count">{rate}</div>
-          </div>
+        <div
+          className="heart-rate"
+          style={{
+            minHeight: "20px",
+          }}
+        >
+          {rate && (
+            <Fragment>
+              <HelpIcon
+                style={{
+                  bottom: null,
+                  paddingLeft: "5px",
+                  top: "-6px",
+                  right: "-26px",
+                  position: "absolute",
+                }}
+              >
+                {language.map((line, i) => (
+                  <Fragment key={i}>
+                    {line.includes("{LAST_UPDATE}")
+                      ? line.replaceAll(
+                          "{LAST_UPDATE}",
+                          timeSince(time, langName === "EN_us")
+                        )
+                      : line}
+                    <br />
+                  </Fragment>
+                ))}
+              </HelpIcon>
+              <div
+                className="heart"
+                style={{ animation: "animateHeart " + velocity + "s infinite" }}
+              >
+                <div className="rate-count">{rate}</div>
+              </div>
+            </Fragment>
+          )}
         </div>
       </div>
     </div>
