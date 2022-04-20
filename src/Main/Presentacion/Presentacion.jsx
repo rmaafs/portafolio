@@ -7,6 +7,7 @@ import Planetas from "./Planetas/Planetas";
 import "./Presentacion.css";
 import imgUs from "../../assets/lang/EN_us.png";
 import imgEs from "../../assets/lang/ES_mx.png";
+import HeartRate from "./HeartRate/HeartRate";
 
 const Presentacion = () => {
   const { lang, updateLang } = useContext(useLanguage);
@@ -39,6 +40,8 @@ const Presentacion = () => {
           />
 
           {isNavidad && <Gorrito />}
+
+          <HeartRate />
         </div>
 
         <div className="col-12 mt-4 mb-5">
