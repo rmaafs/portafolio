@@ -1,14 +1,14 @@
 .heart-container {
   position: relative;
   width: 100%;
+  text-align: -webkit-center;
 }
 
 .heart-rate {
-  position: absolute;
-  top: -32px;
-  width: 100%;
+  position: relative;
+  top: -20px;
   right: -72px;
-  text-align: -webkit-center;
+  max-width: 21px;
 }
 
 .heart {

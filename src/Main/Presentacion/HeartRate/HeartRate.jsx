@@ -26,13 +26,15 @@ const HeartRate = () => {
   };
 
   return (
-    <div className="heart-container col-12">
-      <div className="heart-rate">
-        <div
-          className="heart"
-          style={{ animation: "animateHeart 1.2s infinite" }}
-        >
-          <div className="rate-count">{rate}</div>
+    <div className="col-12" style={{ position: "relative" }}>
+      <div className="heart-container">
+        <div className="heart-rate">
+          <div
+            className="heart"
+            style={{ animation: "animateHeart 1.2s infinite" }}
+          >
+            <div className="rate-count">{rate}</div>
+          </div>
         </div>
       </div>
     </div>
