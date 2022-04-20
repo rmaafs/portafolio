@@ -1,16 +1,25 @@
-import React, { useEffect, useState } from "react";
+import React, { Fragment, useContext, useEffect, useState } from "react";
+import { useLanguage } from "../../../hooks/LanguageContext/useLanguageContext";
+import HelpIcon from "../../HelpIcon";
 import "./HeartRate.css";
 
 const HeartRate = () => {
+  const { lang, langName } = useContext(useLanguage);
   const [rate, setRate] = useState(undefined);
   const [time, setTime] = useState(undefined);
+  const [velocity, setVelocity] = useState("1.2");
+
+  /**
+   * 80 = 1.2
+   */
+
+  const language = lang.principal.heart;
 
   useEffect(() => {
     getLastHeartRate();
   }, []);
 
   const getLastHeartRate = () => {
-    timeSince(time);
     fetch("https://api.rmaafs.com/fitness/heart")
       .then((data) => data.json())
       .then((json) => {
@@ -18,6 +27,7 @@ const HeartRate = () => {
           const time = Number(json.time.substring(0, 13));
           setRate(json.value);
           setTime(time);
+          setVelocity("1.2");
         }
       })
       .catch((err) => {
@@ -25,13 +35,36 @@ const HeartRate = () => {
       });
   };
 
+  if (rate === undefined) return <div></div>;
+
   return (
     <div className="col-12" style={{ position: "relative" }}>
       <div className="heart-container">
         <div className="heart-rate">
+          <HelpIcon
+            style={{
+              bottom: null,
+              paddingLeft: "5px",
+              top: "-6px",
+              right: "-26px",
+              position: "absolute",
+            }}
+          >
+            {language.map((line, i) => (
+              <Fragment key={i}>
+                {line.includes("{LAST_UPDATE}")
+                  ? line.replaceAll(
+                      "{LAST_UPDATE}",
+                      timeSince(time, langName === "EN_us")
+                    )
+                  : line}
+                <br />
+              </Fragment>
+            ))}
+          </HelpIcon>
           <div
             className="heart"
-            style={{ animation: "animateHeart 1.2s infinite" }}
+            style={{ animation: "animateHeart " + velocity + "s infinite" }}
           >
             <div className="rate-count">{rate}</div>
           </div>
