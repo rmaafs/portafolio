@@ -40,7 +40,7 @@ const AboutMe = () => {
               </a>
               {language.experience[2]}
               <a
-                href="https://www.linkedin.com/company/wonderblocks/"
+                href="https://www.playstudios.com/"
                 target="_blank"
                 rel="noreferrer"
                 style={{
