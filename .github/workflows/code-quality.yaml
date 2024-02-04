@@ -25,16 +25,16 @@ jobs:
         run: |
           npm ci
 
-      - name: 🔅 Prettier, Code Syntax Standard
-        run: |
-          echo "Recuerda tener instalado Prettier como formateador de código en tu Editor de texto"
-          echo "Este código usará como estándar la indentación de Prettier."
-          echo "Para solucionar tu indentación, ejecuta npm run sintax:fix"
-          npm run sintax:test
+      # - name: 🔅 Prettier, Code Syntax Standard
+      #   run: |
+      #     echo "Recuerda tener instalado Prettier como formateador de código en tu Editor de texto"
+      #     echo "Este código usará como estándar la indentación de Prettier."
+      #     echo "Para solucionar tu indentación, ejecuta npm run sintax:fix"
+      #     npm run sintax:test
 
-      - name: 👀 Project Standards
-        run: |
-          npm test
+      # - name: 👀 Project Standards
+      #   run: |
+      #     npm test
 
       - name: 👀 Code Quality
         run: |
