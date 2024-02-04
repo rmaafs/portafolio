@@ -38,21 +38,23 @@ const Repositorios = () => {
         408052818, //rmaafs-api
       ];
 
-      const fetchRepos = () => {
-        fetch("https://api.github.com/users/rmaafs/repos")
+      const fetchRepos = (page = 1) => {
+        fetch("https://api.github.com/users/rmaafs/repos?page=" + page)
           .then((response) => response.json())
           .then((jsonData) => {
             //Filtramos para que únicamente estén los que queremos mostrar
-            setRepos(
-              jsonData.filter((repo) => showThisRepos.includes(repo.id))
-            );
+            setRepos((prevRepos) => [
+              ...prevRepos,
+              ...jsonData.filter((repo) => showThisRepos.includes(repo.id)),
+            ]);
           })
           .catch((error) => {
             console.error(error);
           });
       };
 
-      fetchRepos();
+      fetchRepos(1);
+      fetchRepos(2);
     }
   }, [firstRender]);
 
