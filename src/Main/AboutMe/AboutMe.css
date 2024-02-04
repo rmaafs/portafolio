@@ -34,29 +34,70 @@ span {
 }
 
 .img-container {
+  display: flex;
+  justify-content: center;
   align-self: center !important;
   text-align: center !important;
   position: relative;
   top: 45px;
+  max-height: 500px;
+}
+
+.img-container .img-wrapper {
+  position: relative;
+}
+
+.img-container .img-animation-fadein {
+  animation: fadeIn 1s;
+  animation-fill-mode: forwards;
+}
+
+.img-container .img-animation-fadeout {
+  animation: fadeOut 1s;
+  animation-fill-mode: forwards;
 }
 
 .img-container img {
-  width: 90%;
+  width: 100%;
   border-radius: 20px;
   margin-top: -7px;
-  max-width: 630px;
+  max-width: 400px;
+  max-height: 500px;
 }
 
-.img-container picture::before {
+.img-container .img-border {
   border: 1px solid #d100ff;
-  top: 3px;
-  left: 26px;
-  z-index: -1;
-  content: "";
   display: block;
-  position: absolute;
-  width: 89%;
-  height: 100%;
   border-radius: 20px;
-  box-sizing: inherit;
+  position: absolute;
+  top: 4px;
+  left: -4px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  padding: 0px;
+  margin: 0px;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  97% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
