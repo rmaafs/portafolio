@@ -21,7 +21,6 @@ const HelpIcon = (props) => {
           cursor: "pointer",
           ...(props.style || null),
         }}
-        space="preserve"
       >
         <g>
           <g>

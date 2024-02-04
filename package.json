@@ -4,17 +4,14 @@
   "private": true,
   "homepage": "https://rmaafs.com",
   "dependencies": {
-    "@material-ui/core": "^4.12.3",
-    "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^12.0.0",
-    "@testing-library/user-event": "^13.2.1",
-    "react": "^17.0.2",
-    "react-animate-on-scroll": "^2.1.5",
-    "react-dom": "^17.0.2",
+    "@material-ui/core": "^4.12.4",
+    "react": "^16.8.0",
+    "react-animate-on-scroll": "^2.1.7",
+    "react-dom": "^16.8.0",
     "react-fade-in": "^2.0.1",
     "react-loadingg": "^1.7.2",
-    "react-scripts": "4.0.3",
-    "web-vitals": "^2.1.0"
+    "react-scripts": "^5.0.1",
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "sintax:test": "prettier --check \"{,!(node_modules)/**/}*.(jsx|css)\"",
@@ -22,7 +19,7 @@
     "lint": "eslint . --ext .jsx",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --transformIgnorePatterns 'node_modules/(?!(<your-package-goes-here>)/)'",
     "eject": "react-scripts eject",
     "predeploy": "npm run mytest && npm run build",
     "deploy": "npm run mytest && gh-pages -d build",
@@ -47,10 +44,29 @@
     ]
   },
   "devDependencies": {
+    "babel-eslint": "^10.1.0",
     "check-files-exist": "^1.0.1",
     "eslint": "^7.32.0",
     "eslint-plugin-switch-error-warn": "^1.0.0",
     "gh-pages": "^3.2.3",
-    "prettier": "^2.3.2"
+    "prettier": "^2.8.8",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^12.1.5",
+    "@testing-library/user-event": "^13.5.0",
+    "@babel/plugin-transform-private-property-in-object": "^7.23.4"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!**/node_modules/**"
+    ],
+    "coverageReporters": [
+      "text-summary",
+      "lcov",
+      "cobertura"
+    ],
+    "testMatch": [
+      "**/*.test.js"
+    ]
   }
 }
