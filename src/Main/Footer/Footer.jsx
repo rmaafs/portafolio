@@ -20,7 +20,7 @@ const Footer = () => {
         {language.by}
         <br />
         {language.inspired}
-        <a href="https://github.com/bchiang7" taget="_blank">
+        <a href="https://github.com/bchiang7" target="_blank" rel="noreferrer">
           bchiang7
         </a>{" "}
         © Copyright {new Date().getFullYear()}
