@@ -23,7 +23,7 @@ jobs:
 
       - name: 👷‍♂️ Install dependencies
         run: |
-          npm i
+          npm ci
 
       - name: 🔅 Prettier, Code Syntax Standard
         run: |

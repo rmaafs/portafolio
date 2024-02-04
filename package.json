@@ -19,7 +19,7 @@
     "lint": "eslint . --ext .jsx",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --transformIgnorePatterns 'node_modules/(?!(<your-package-goes-here>)/)'",
     "eject": "react-scripts eject",
     "predeploy": "npm run mytest && npm run build",
     "deploy": "npm run mytest && gh-pages -d build",
