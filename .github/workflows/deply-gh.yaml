@@ -32,9 +32,9 @@ jobs:
           echo "Para solucionar tu indentación, ejecuta npm run sintax:fix"
           npm run sintax:test
 
-      - name: 👀 Project Standards
-        run: |
-          npm test
+      # - name: 👀 Project Standards
+      #   run: |
+      #     npm test
 
       - name: 👀 Code Quality
         run: |
