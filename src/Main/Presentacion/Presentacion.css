@@ -81,3 +81,18 @@
   color: #febaff;
   cursor: pointer;
 }
+
+.btn-download-cv {
+  background-color: transparent;
+  border: 1px solid #d100ff;
+  padding-block: 5px;
+  padding-inline: 20px;
+  border-radius: 10px;
+  color: #f3beff;
+  margin-bottom: 15px;
+}
+
+.btn-download-cv:hover {
+  color: white;
+  cursor: pointer;
+}

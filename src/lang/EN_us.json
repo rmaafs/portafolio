@@ -2,6 +2,7 @@
   "principal": {
     "hello": "👋 Hi, I'm Rodrigo Maafs Atilano",
     "occupation": "Computer Systems Engineer",
+    "download_cv": "Download CV",
     "planets": {
       "earth": "Earth",
       "mars": "Mars",

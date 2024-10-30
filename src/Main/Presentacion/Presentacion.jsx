@@ -13,6 +13,10 @@ const Presentacion = () => {
   const { lang, updateLang } = useContext(useLanguage);
   const isNavidad = new Date().getMonth() + 1 === 12;
 
+  const handleDownloadCV = () => {
+    window.open("/cv.pdf", "_blank");
+  };
+
   const Bandera = ({ image, title, lang }) => {
     return (
       <div className="col-6 bandera" onClick={() => updateLang(lang)}>
@@ -82,6 +86,10 @@ const Presentacion = () => {
                 title="Email"
               />
             </div>
+
+            <button className="btn-download-cv" onClick={handleDownloadCV}>
+              {lang.principal.download_cv}
+            </button>
           </div>
 
           <Spotify />
