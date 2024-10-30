@@ -48,12 +48,12 @@ const Presentacion = () => {
           <HeartRate />
         </div>
 
-        <div className="col-12 mt-4 mb-5">
+        <div className="col-12 mt-2 mb-5">
           <span>{lang.principal.hello}</span>
           <br />
           <span>{lang.principal.occupation}</span>
 
-          <div className="col-12 mt-4">
+          <div className="col-12 mt-1">
             <div className="row contact-list">
               <ContactComponent
                 type="github"
@@ -87,7 +87,7 @@ const Presentacion = () => {
               />
             </div>
 
-            <button className="btn-download-cv" onClick={handleDownloadCV}>
+            <button className="btn-download-cv mb-4" onClick={handleDownloadCV}>
               {lang.principal.download_cv}
             </button>
           </div>
