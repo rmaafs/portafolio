@@ -13,6 +13,10 @@ const Presentacion = () => {
   const { lang, updateLang } = useContext(useLanguage);
   const isNavidad = new Date().getMonth() + 1 === 12;
 
+  const handleDownloadCV = () => {
+    window.open("/cv.pdf", "_blank");
+  };
+
   const Bandera = ({ image, title, lang }) => {
     return (
       <div className="col-6 bandera" onClick={() => updateLang(lang)}>
@@ -44,12 +48,12 @@ const Presentacion = () => {
           <HeartRate />
         </div>
 
-        <div className="col-12 mt-4 mb-5">
+        <div className="col-12 mt-2 mb-5">
           <span>{lang.principal.hello}</span>
           <br />
           <span>{lang.principal.occupation}</span>
 
-          <div className="col-12 mt-4">
+          <div className="col-12 mt-1">
             <div className="row contact-list">
               <ContactComponent
                 type="github"
@@ -82,6 +86,10 @@ const Presentacion = () => {
                 title="Email"
               />
             </div>
+
+            <button className="btn-download-cv mb-4" onClick={handleDownloadCV}>
+              {lang.principal.download_cv}
+            </button>
           </div>
 
           <Spotify />

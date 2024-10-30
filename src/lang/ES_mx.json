@@ -2,6 +2,7 @@
   "principal": {
     "hello": "👋 Hola, soy Rodrigo Maafs Atilano",
     "occupation": "Ingeniero en Sistemas Computacionales",
+    "download_cv": "Descargar CV",
     "planets": {
       "earth": "Tierra",
       "mars": "Marte",
