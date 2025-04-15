@@ -16,7 +16,7 @@ const HeartRate = () => {
   }, []);
 
   const getLastHeartRate = () => {
-    fetch("http://localhost:20202/fitness/heart")
+    fetch("https://api.rmaafs.com/fitness/heart")
       .then((data) => data.json())
       .then((json) => {
         if (json.value) {
