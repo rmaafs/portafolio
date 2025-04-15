@@ -11,7 +11,7 @@
     "heart": [
       "⌛ Last update: {LAST_UPDATE}",
       "",
-      "🔅 My own API connected with my MiBand 7 and Google Fitness API."
+      "🔅 My own API connected with my MiBand and Home Assistant API."
     ],
     "spotify": {
       "what_im_listening": "What song I'm listening now?",

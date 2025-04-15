@@ -16,11 +16,11 @@ const HeartRate = () => {
   }, []);
 
   const getLastHeartRate = () => {
-    fetch("https://api.rmaafs.com/fitness/heart")
+    fetch("http://localhost:20202/fitness/heart")
       .then((data) => data.json())
       .then((json) => {
         if (json.value) {
-          const time = Number(json.time.substring(0, 13));
+          const time = Number(json.time);
           setRate(json.value);
           setTime(time);
 
