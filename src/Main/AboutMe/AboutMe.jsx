@@ -14,6 +14,8 @@ import yo_titulo from "../../assets/yo/yo_titulo.png";
 import yo_vaquero from "../../assets/yo/yo_vaquero.png";
 import yo_vegas_letrero from "../../assets/yo/yo_vegas_letrero.png";
 import yo_vegas from "../../assets/yo/yo_vegas.png";
+import yo_heli from "../../assets/yo/yo_heli.png";
+import yo_heli2 from "../../assets/yo/yo_heli2.png";
 import { useState } from "react";
 import { useEffect } from "react";
 
@@ -27,6 +29,8 @@ const AboutMe = () => {
     yo_nieve,
     yo_paisaje,
     yo_titulo,
+    yo_heli,
+    yo_heli2,
     yo_vegas,
     yo_guitarra,
     yo_playa,
