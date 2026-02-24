@@ -2,7 +2,7 @@ name: 👀 Code Quality
 on:
   pull_request:
     branches:
-      - master
+      - main
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
