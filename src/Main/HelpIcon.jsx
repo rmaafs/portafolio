@@ -1,5 +1,5 @@
 import React from "react";
-import Tooltip from "@material-ui/core/Tooltip";
+import Tooltip from "./Tooltip/Tooltip";
 
 const HelpIcon = (props) => {
   const color = "#ccd6f6";
@@ -63,7 +63,7 @@ const HelpIcon = (props) => {
   return (
     <div>
       <Tooltip
-        title={
+        content={
           <div
             style={{
               fontSize: "12px",
@@ -74,7 +74,6 @@ const HelpIcon = (props) => {
             {props.children}
           </div>
         }
-        arrow
       >
         {getIcon()}
       </Tooltip>

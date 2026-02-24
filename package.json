@@ -4,14 +4,14 @@
   "private": true,
   "homepage": "https://rmaafs.com",
   "dependencies": {
-    "@material-ui/core": "^4.12.4",
-    "react": "^16.8.0",
-    "react-animate-on-scroll": "^2.1.7",
-    "react-dom": "^16.8.0",
+    "@tippyjs/react": "^4.2.6",
+    "react": "^16.14.0",
+    "react-animate-on-scroll": "^2.1.9",
+    "react-dom": "^16.14.0",
     "react-fade-in": "^2.0.1",
     "react-loadingg": "^1.7.2",
-    "react-scripts": "^5.0.1",
-    "web-vitals": "^2.1.4"
+    "tippy.js": "^6.3.7",
+    "web-vitals": "^5.1.0"
   },
   "scripts": {
     "sintax:test": "prettier --check \"{,!(node_modules)/**/}*.(jsx|css)\"",
@@ -44,16 +44,15 @@
     ]
   },
   "devDependencies": {
-    "babel-eslint": "^10.1.0",
-    "check-files-exist": "^1.0.1",
-    "eslint": "^7.32.0",
-    "eslint-plugin-switch-error-warn": "^1.0.0",
-    "gh-pages": "^3.2.3",
-    "prettier": "^2.8.8",
-    "@testing-library/jest-dom": "^5.17.0",
+    "@babel/plugin-transform-private-property-in-object": "^7.28.6",
+    "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^12.1.5",
-    "@testing-library/user-event": "^13.5.0",
-    "@babel/plugin-transform-private-property-in-object": "^7.23.4"
+    "@testing-library/user-event": "^14.6.1",
+    "eslint": "^8.57.1",
+    "eslint-plugin-switch-error-warn": "^1.0.0",
+    "gh-pages": "^6.3.0",
+    "prettier": "^3.8.1",
+    "react-scripts": "^5.0.1"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -68,5 +67,11 @@
     "testMatch": [
       "**/*.test.js"
     ]
+  },
+  "overrides": {
+    "minimatch": "^10.2.1",
+    "nth-check": "^2.0.1",
+    "postcss": "^8.4.31",
+    "jsonpath": "npm:jsonpath-plus@^10.0.0"
   }
 }
