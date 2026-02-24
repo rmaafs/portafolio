@@ -28,7 +28,7 @@ const Tests = () => {
         .then((jsonData) => {
           if (jsonData.workflow_runs.length > 0) {
             const testBuildDeploy = jsonData.workflow_runs.find((it) =>
-              it.name.includes("Build and Deploy")
+              it.name.includes("Build and Deploy"),
             );
             if (testBuildDeploy) {
               setRun(testBuildDeploy);

@@ -1,6 +1,7 @@
 .presentacion {
   color: white;
-  background: linear-gradient(rgba(0, 0, 0, 0.75) 100%, rgba(0, 0, 0, 0.5) 100%),
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.75) 100%, rgba(0, 0, 0, 0.5) 100%),
     url("../../assets/europa.png");
   background-size: cover;
   background-position: center;
@@ -17,8 +18,13 @@
 
 .presentacion span {
   font-size: 18px;
-  font-family: "Calibre", "San Francisco", "SF Pro Text", -apple-system,
-    system-ui, sans-serif;
+  font-family:
+    "Calibre",
+    "San Francisco",
+    "SF Pro Text",
+    -apple-system,
+    system-ui,
+    sans-serif;
 }
 
 .contact-list {
