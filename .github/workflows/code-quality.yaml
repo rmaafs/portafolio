@@ -6,20 +6,17 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [12.x]
 
     steps:
       - name: 🔽 Download project
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
-          persist-credential: false
+          persist-credentials: false
 
-      - name: 🏠 Install Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+      - name: 🏠 Install Node.js
+        uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version-file: .nvmrc
 
       - name: 👷‍♂️ Install dependencies
         run: |
