@@ -6,7 +6,7 @@ import Queue from "./Queue/Queue";
 import "./Spotify.css";
 
 const Spotify = () => {
-  const URL = "https://api.rmaafs.com/spotify/current-track";
+  const URL = "https://api-worker.rmaafs.com/spotify/current-track";
 
   const { lang } = useContext(useLanguage);
   const [track, setTrack] = useState({});

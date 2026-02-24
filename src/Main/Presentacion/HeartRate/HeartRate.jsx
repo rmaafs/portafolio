@@ -16,7 +16,7 @@ const HeartRate = () => {
   }, []);
 
   const getLastHeartRate = () => {
-    fetch("https://api.rmaafs.com/fitness/heart")
+    fetch("https://api-worker.rmaafs.com/fitness/heart")
       .then((data) => data.json())
       .then((json) => {
         if (json.value) {
@@ -69,7 +69,7 @@ const HeartRate = () => {
                     {line.includes("{LAST_UPDATE}")
                       ? line.replaceAll(
                           "{LAST_UPDATE}",
-                          timeSince(time, langName === "EN_us")
+                          timeSince(time, langName === "EN_us"),
                         )
                       : line}
                     <br />
