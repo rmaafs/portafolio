@@ -1,4 +1,4 @@
-# Portfolio — Rodrigo Maafs Atilano ![CI/CD](https://github.com/rmaafs/portafolio/workflows/Build%20and%20Deploy/badge.svg)
+# Portfolio — Rodrigo Maafs Atilano ![CI/CD](https://github.com/rmaafs/portafolio/workflows/🚀%20Build%20and%20Deploy/badge.svg)
 
 My personal portfolio website built with **React**, showcasing my work, real-time integrations, and DevOps practices.
 
