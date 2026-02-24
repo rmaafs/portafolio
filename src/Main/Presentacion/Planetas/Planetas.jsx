@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import Tooltip from "@material-ui/core/Tooltip";
+import Tooltip from "../../Tooltip/Tooltip";
 import { useLanguage } from "../../../hooks/LanguageContext/useLanguageContext";
 import "./Planetas.css";
 
@@ -8,17 +8,17 @@ const Planetas = () => {
 
   return (
     <div id="orbits">
-      <Tooltip title={lang.principal.planets.earth} arrow>
+      <Tooltip content={lang.principal.planets.earth}>
         <div className="hearth">
           <div className="luna"></div>
         </div>
       </Tooltip>
 
-      <Tooltip title={lang.principal.planets.mars} arrow>
+      <Tooltip content={lang.principal.planets.mars}>
         <div className="mars"></div>
       </Tooltip>
 
-      <Tooltip title={lang.principal.planets.jupiter} arrow>
+      <Tooltip content={lang.principal.planets.jupiter}>
         <div className="jupiter">
           <div className="luna1"></div>
           <div className="luna2"></div>

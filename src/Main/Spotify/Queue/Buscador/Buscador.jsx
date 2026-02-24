@@ -37,7 +37,7 @@ const Buscador = ({ onClose, onChoose, onError }) => {
   };
 
   const search = () => {
-    fetch("https://api.rmaafs.com/spotify/search?q=" + text)
+    fetch("https://api-worker.rmaafs.com/spotify/search?q=" + text)
       .then((data) => data.json())
       .then((json) => {
         if (!json.error) {
@@ -52,7 +52,7 @@ const Buscador = ({ onClose, onChoose, onError }) => {
 
   const handleChoose = async () => {
     setLoading(true);
-    await fetch("https://api.rmaafs.com/spotify/queue", {
+    await fetch("https://api-worker.rmaafs.com/spotify/queue", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

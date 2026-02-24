@@ -1,10 +1,10 @@
 import React from "react";
 import Colors from "../../../Colors";
-import Tooltip from "@material-ui/core/Tooltip";
+import Tooltip from "../../Tooltip/Tooltip";
 
 const ContactComponent = (props) => {
   return (
-    <Tooltip title={props.title} arrow>
+    <Tooltip content={props.title}>
       <div
         className="d-flex flex-items-center mb-3"
         style={{

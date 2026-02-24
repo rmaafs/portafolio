@@ -2,20 +2,22 @@
   "env": {
     "browser": true,
     "node": true,
-    "es6": true
+    "es6": true,
   },
   "globals": {
-    "document": false
+    "document": false,
   },
-  "parser": "babel-eslint",
+  "parser": "@babel/eslint-parser",
   "parserOptions": {
-    "ecmaVersion": 6,
+    "ecmaVersion": 2021,
     "sourceType": "module",
+    "requireConfigFile": false,
+    "babelOptions": {
+      "presets": ["@babel/preset-react"],
+    },
     "ecmaFeatures": {
       "jsx": true,
-      "modules": true,
-      "experimentalObjectRestSpread": true
-    }
+    },
   },
   "extends": ["eslint:recommended", "plugin:react/recommended"],
   "rules": {
@@ -25,13 +27,13 @@
     "react/display-name": 1,
     "no-unused-vars": "error",
     "no-console": ["error", { "allow": ["error", "warn"] }],
-    "no-unexpected-multiline": "error"
+    "no-unexpected-multiline": "error",
   },
   "settings": {
     "react": {
       "pragma": "React",
-      "version": "15.6.1"
-    }
+      "version": "detect",
+    },
   },
-  "plugins": ["react"]
+  "plugins": ["react"],
 }

@@ -105,7 +105,7 @@ const Repositorio = () => {
           <ScrollAnimation animateIn="animate__fadeIn" offset={0}>
             <a
               className="more-commits"
-              href="https://github.com/rmaafs/portafolio/commits/master"
+              href="https://github.com/rmaafs/portafolio/commits/main"
               target="_blank"
               rel="noreferrer"
             >
