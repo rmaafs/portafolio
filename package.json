@@ -7,7 +7,7 @@
     "@tippyjs/react": "^4.2.6",
     "react": "^16.14.0",
     "react-animate-on-scroll": "^2.1.9",
-    "react-dom": "^16.14.0",
+    "react-dom": "^19.2.4",
     "react-fade-in": "^2.0.1",
     "react-loadingg": "^1.7.2",
     "tippy.js": "^6.3.7",
