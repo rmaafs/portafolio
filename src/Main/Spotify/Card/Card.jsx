@@ -115,7 +115,7 @@ const Card = ({ track, onFinishSong }) => {
         <div className="sp-track text-left">
           <Clickeable>
             <h2>{refactorLenght(track.name)}</h2>
-            <h3>{track.artista}</h3>
+            <h3>{track.artist}</h3>
           </Clickeable>
         </div>
 
