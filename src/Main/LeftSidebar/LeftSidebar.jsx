@@ -41,13 +41,13 @@ const LeftSidebar = () => {
           />
           <ContactComponent
             type="instagram"
-            link="https://instagram.com/relmaps"
-            username="@relmaps"
+            link="https://instagram.com/rmaafs"
+            username="@rmaafs"
           />
           <ContactComponent
             type="facebook"
-            link="https://www.facebook.com/ElMaps/"
-            username="@ElMaps"
+            link="https://www.facebook.com/rmaafs/"
+            username="@rmaafs"
           />
           <ContactComponent
             type="email"

@@ -72,12 +72,12 @@ const Presentacion = () => {
               />
               <ContactComponent
                 type="instagram"
-                link="https://instagram.com/relmaps"
+                link="https://instagram.com/rmaafs"
                 title="Instagram"
               />
               <ContactComponent
                 type="facebook"
-                link="https://www.facebook.com/ElMaps/"
+                link="https://www.facebook.com/rmaafs/"
                 title="Facebook"
               />
               <ContactComponent
