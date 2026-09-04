@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useLanguage } from "../../../hooks/LanguageContext/useLanguageContext";
-import ScrollAnimation from "react-animate-on-scroll";
+import ScrollAnimation from "../../../components/ScrollAnimation/ScrollAnimation";
 import Colors from "../../../Colors";
 import "./Repositorio.css";
 

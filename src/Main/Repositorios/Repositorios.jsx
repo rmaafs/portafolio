@@ -8,7 +8,7 @@ import React, {
 import { useLanguage } from "../../hooks/LanguageContext/useLanguageContext";
 import Colors from "../../Colors";
 import RepoComponent from "./RepoComponent/RepoComponent";
-import ScrollAnimation from "react-animate-on-scroll";
+import ScrollAnimation from "../../components/ScrollAnimation/ScrollAnimation";
 import "./Repositorios.css";
 import HelpIcon from "../HelpIcon";
 
