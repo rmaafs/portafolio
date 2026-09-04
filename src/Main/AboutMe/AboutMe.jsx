@@ -110,7 +110,7 @@ const AboutMe = () => {
               </a>
               {language.experience[2]}
               <a
-                href="https://www.playstudios.com/"
+                href="https://marein.io/"
                 target="_blank"
                 rel="noreferrer"
                 style={{
@@ -119,7 +119,29 @@ const AboutMe = () => {
               >
                 {language.experience[3]}
               </a>
-              .
+              {language.experience[4]}
+              <a
+                href="https://www.undercurrency.com/"
+                target="_blank"
+                rel="noreferrer"
+                style={{
+                  color: Colors.colors.primary_span,
+                }}
+              >
+                {language.experience[5]}
+              </a>
+              {language.experience[6]}
+              <a
+                href="https://perceptnote.com/"
+                target="_blank"
+                rel="noreferrer"
+                style={{
+                  color: Colors.colors.primary_span,
+                }}
+              >
+                {language.experience[7]}
+              </a>
+              {language.experience[8]}
             </span>
             <br />
             <br />
