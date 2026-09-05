@@ -12,8 +12,8 @@ import {
   BatteryLoading,
   CoffeeLoading,
   EatLoading,
-} from "react-loadingg";
-import FadeIn from "react-fade-in";
+} from "../components/Loaders";
+import FadeIn from "../components/FadeIn/FadeIn";
 import Colors from "../Colors";
 import CI_CD from "./CI_CD/CI_CD";
 import Footer from "./Footer/Footer";

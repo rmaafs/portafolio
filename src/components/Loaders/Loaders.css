@@ -1,0 +1,567 @@
+/*
+ * Loaders portados desde "react-loadingg" (MIT), que quedó abandonada y
+ * dependía de styled-components@4, incompatible con React 18/19.
+ *
+ * El CSS se extrajo renderizando la librería original en servidor, así que las
+ * reglas y los keyframes son los mismos que producía styled-components. Solo se
+ * quitaron los prefijos -webkit-/-ms- redundantes (los navegadores objetivo
+ * soportan las propiedades estándar) y el color se parametrizó con la variable
+ * --loader-color para conservar la prop `color` de la API original.
+ */
+
+/*
+ * El posicionamiento del contenedor (margin/position/inset) NO va aquí: la
+ * librería original lo aplicaba como style inline y varias clases de abajo
+ * declaran `position: relative` o `margin`. Ver ROOT_STYLE en index.jsx.
+ */
+
+/* ============ PointSpreadLoading ============ */
+
+.ldg-point-spread {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  width: 120px;
+  overflow: hidden;
+  animation-delay: 1s;
+}
+
+.ldg-point-spread__dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--loader-color);
+  margin: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ldg-point-spread__dot:before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--loader-color);
+  opacity: 0.7;
+  animation: ldg-point-spread-kf 2s infinite cubic-bezier(0, 0, 0.49, 1.02);
+  transition: 0.5s all ease;
+  transform: scale(1);
+}
+
+.ldg-point-spread__dot:nth-child(1):before {
+  animation-delay: 250ms;
+}
+.ldg-point-spread__dot:nth-child(2):before {
+  animation-delay: 500ms;
+}
+.ldg-point-spread__dot:nth-child(3):before {
+  animation-delay: 750ms;
+}
+.ldg-point-spread__dot:nth-child(4):before {
+  animation-delay: 1000ms;
+}
+
+@keyframes ldg-point-spread-kf {
+  0% {
+    transform: scale(1);
+  }
+  50%,
+  75% {
+    transform: scale(2.5);
+  }
+  78%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* ============ CommonLoading ============ */
+
+.ldg-common {
+  width: 50px;
+  height: 50px;
+}
+
+.ldg-common__arm {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  animation: ldg-common-kf 2s linear infinite;
+}
+
+.ldg-common__arm:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.ldg-common__arm:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.ldg-common__arm:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.ldg-common__arm:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+.ldg-common__dot {
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background: var(--loader-color);
+  position: absolute;
+  left: 50%;
+  margin-top: -10px;
+  margin-left: -10px;
+}
+
+@keyframes ldg-common-kf {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(45deg);
+  }
+  50% {
+    opacity: 1;
+    transform: rotate(160deg);
+  }
+  62% {
+    opacity: 0;
+  }
+  65% {
+    opacity: 0;
+    transform: rotate(200deg);
+  }
+  90% {
+    transform: rotate(340deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* ============ WindMillLoading ============ */
+
+.ldg-windmill {
+  height: 0;
+  width: 4px;
+  border-width: 0 4px 50px 4px;
+  border-style: none solid solid;
+  border-color: transparent transparent var(--loader-color);
+  position: relative;
+  padding-top: 25px;
+}
+
+.ldg-windmill__hub {
+  width: 4px;
+  height: 4px;
+  border: 3px var(--loader-color) solid;
+  background: #fff;
+  border-radius: 5px;
+  transform: translateX(-3px) translateY(-4px);
+  position: absolute;
+}
+
+.ldg-windmill__blades {
+  position: relative;
+  animation: ldg-windmill-kf 5s infinite linear;
+}
+
+.ldg-windmill__blade {
+  height: 0;
+  width: 2px;
+  border-width: 30px 2px 0px 2px;
+  border-style: solid solid none;
+  border-color: var(--loader-color) transparent transparent;
+  position: absolute;
+}
+
+.ldg-windmill__blade:nth-child(1) {
+  transform-origin: 0 -2px;
+  transform: rotate(60deg);
+}
+.ldg-windmill__blade:nth-child(2) {
+  transform-origin: 2px -1px;
+  transform: rotate(180deg);
+}
+.ldg-windmill__blade:nth-child(3) {
+  transform-origin: 5px 0;
+  transform: rotate(300deg);
+}
+
+@keyframes ldg-windmill-kf {
+  0% {
+    transform: rotate(360deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* ============ MeteorRainLoading ============ */
+
+.ldg-meteor {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  transform: rotateZ(45deg);
+}
+
+.ldg-meteor__drop {
+  height: 2px;
+  background: linear-gradient(-45deg, var(--loader-color), rgba(0, 0, 255, 0));
+  position: absolute;
+  border-radius: 50%;
+  animation:
+    ldg-meteor-width-kf 3s ease-in-out infinite,
+    ldg-meteor-move-kf 3s ease-in-out infinite;
+}
+
+.ldg-meteor > div:nth-of-type(1) {
+  top: 30%;
+  left: 25%;
+  animation-delay: 0s;
+}
+.ldg-meteor > div:nth-of-type(2) {
+  top: 10%;
+  left: 0%;
+  animation-delay: 0.8s;
+}
+.ldg-meteor > div:nth-of-type(3) {
+  top: 15%;
+  left: 10%;
+  animation-delay: 0.5s;
+}
+.ldg-meteor > div:nth-of-type(4) {
+  top: 25%;
+  left: 30%;
+  animation-delay: 1.6s;
+}
+.ldg-meteor > div:nth-of-type(5) {
+  top: 40%;
+  left: 4%;
+  animation-delay: 3.2s;
+}
+.ldg-meteor > div:nth-of-type(6) {
+  top: 55%;
+  left: 18%;
+  animation-delay: 1.2s;
+}
+.ldg-meteor > div:nth-of-type(7) {
+  top: 66%;
+  left: 3%;
+  animation-delay: 0.4s;
+}
+.ldg-meteor > div:nth-of-type(8) {
+  top: 77%;
+  left: 24%;
+  animation-delay: 2s;
+}
+.ldg-meteor > div:nth-of-type(9) {
+  top: 83%;
+  left: 30%;
+  animation-delay: 1s;
+}
+
+@keyframes ldg-meteor-width-kf {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 40px;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes ldg-meteor-move-kf {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(60px);
+  }
+}
+
+/* ============ SemipolarLoading ============ */
+
+.ldg-semipolar {
+  width: 50px;
+  height: 50px;
+  position: relative;
+}
+
+.ldg-semipolar__ring {
+  box-sizing: border-box;
+  border-radius: 50%;
+  position: absolute;
+  border: calc(50px * 0.05) solid transparent;
+  border-top-color: var(--loader-color);
+  border-left-color: var(--loader-color);
+}
+
+.ldg-semipolar > div:nth-child(1) {
+  height: calc(50px - 50px * 0.2 * 0);
+  width: calc(50px - 50px * 0.2 * 0);
+  top: calc(50px * 0.1 * 0);
+  left: calc(50px * 0.1 * 0);
+  animation: ldg-semipolar-kf 2s infinite;
+  animation-delay: calc(2s * 0.1 * 4);
+  z-index: 5;
+}
+.ldg-semipolar > div:nth-child(2) {
+  height: calc(50px - 50px * 0.2 * 1);
+  width: calc(50px - 50px * 0.2 * 1);
+  top: calc(50px * 0.1 * 1);
+  left: calc(50px * 0.1 * 1);
+  animation: ldg-semipolar-kf 2s infinite;
+  animation-delay: calc(2s * 0.1 * 3);
+  z-index: 4;
+}
+.ldg-semipolar > div:nth-child(3) {
+  height: calc(50px - 50px * 0.2 * 2);
+  width: calc(50px - 50px * 0.2 * 2);
+  top: calc(50px * 0.1 * 2);
+  left: calc(50px * 0.1 * 2);
+  animation: ldg-semipolar-kf 2s infinite;
+  animation-delay: calc(2s * 0.1 * 2);
+  z-index: 3;
+}
+.ldg-semipolar > div:nth-child(4) {
+  height: calc(50px - 50px * 0.2 * 3);
+  width: calc(50px - 50px * 0.2 * 3);
+  top: calc(50px * 0.1 * 3);
+  left: calc(50px * 0.1 * 3);
+  animation: ldg-semipolar-kf 2s infinite;
+  animation-delay: calc(2s * 0.1 * 1);
+  z-index: 2;
+}
+.ldg-semipolar > div:nth-child(5) {
+  height: calc(50px - 50px * 0.2 * 4);
+  width: calc(50px - 50px * 0.2 * 4);
+  top: calc(50px * 0.1 * 4);
+  left: calc(50px * 0.1 * 4);
+  animation: ldg-semipolar-kf 2s infinite;
+  animation-delay: calc(2s * 0.1 * 0);
+  z-index: 1;
+}
+
+@keyframes ldg-semipolar-kf {
+  50% {
+    transform: rotate(360deg) scale(0.7);
+  }
+}
+
+/* ============ SolarSystemLoading ============ */
+
+.ldg-solar {
+  width: 50px;
+  height: 50px;
+  position: relative;
+}
+
+.ldg-solar__sun {
+  width: 4px;
+  height: 4px;
+  border-radius: 100%;
+  background-color: var(--loader-color);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -2px;
+  margin-top: -2px;
+}
+
+.ldg-solar__earth-orbit {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  border: 1px solid;
+  border-color: var(--loader-color);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -15px;
+  margin-top: -15px;
+  box-sizing: border-box;
+  animation: ldg-solar-kf 2s linear infinite;
+}
+
+.ldg-solar__earth {
+  width: 6px;
+  height: 6px;
+  border-radius: 100%;
+  background-color: var(--loader-color);
+  position: absolute;
+  left: 0px;
+  top: 2px;
+}
+
+.ldg-solar__venus-orbit {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  border: 1px solid;
+  border-color: var(--loader-color);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -30px;
+  margin-top: -30px;
+  box-sizing: border-box;
+  animation: ldg-solar-kf 3s linear infinite;
+}
+
+.ldg-solar__venus {
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  background-color: var(--loader-color);
+  position: absolute;
+  left: 7px;
+  top: 2px;
+}
+
+@keyframes ldg-solar-kf {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* ============ BatteryLoading ============ */
+
+.ldg-battery {
+  width: 30px;
+  height: 14px;
+  border: 1px #fff solid;
+  border-radius: 2px;
+  position: relative;
+  animation: ldg-battery-kf 4s linear infinite;
+}
+
+.ldg-battery::after {
+  width: 2px;
+  height: 7px;
+  background-color: #fff;
+  border-radius: 0px 1px 1px 0px;
+  position: absolute;
+  content: "";
+  top: 2px;
+  right: -4px;
+}
+
+@keyframes ldg-battery-kf {
+  0% {
+    box-shadow: inset 0px 0px 0px var(--loader-color);
+  }
+  100% {
+    box-shadow: inset 30px 0px 0px var(--loader-color);
+  }
+}
+
+/* ============ CoffeeLoading ============ */
+
+.ldg-coffee {
+  height: 30px;
+  width: 30px;
+  border: 1px var(--loader-color) solid;
+  border-radius: 0px 0px 5px 5px;
+  position: relative;
+}
+
+.ldg-coffee::after {
+  content: "";
+  width: 5px;
+  height: 12px;
+  position: absolute;
+  border: 1px solid var(--loader-color);
+  border-left: none;
+  border-radius: 0px 30px 30px 0px;
+  top: 4px;
+  left: 30px;
+}
+
+.ldg-coffee::before {
+  content: "";
+  width: 1px;
+  height: 6px;
+  position: absolute;
+  background-color: var(--loader-color);
+  top: -10px;
+  left: 8px;
+  box-shadow:
+    5px 0px 0px 0px var(--loader-color),
+    5px -5px 0px 0px var(--loader-color),
+    10px 0px 0px 0px var(--loader-color);
+  animation: ldg-coffee-kf 1s linear infinite alternate;
+}
+
+/*
+ * La librería original generaba este bloque con una coma de más
+ * ("0%{height:0px;},100%{height:6px;}"), que invalida el keyframe del 100% y
+ * deja la animación declarando únicamente el 0%.
+ *
+ * No es inofensivo pero tampoco rompe nada: al faltar el 100%, el navegador
+ * toma como estado final implícito el `height: 6px` que el propio ::before ya
+ * declara, así que el vapor sí sube de 0 a 6px. Se replica tal cual (solo el
+ * 0%, sin la coma inválida) porque produce exactamente la misma animación;
+ * verificado muestreando ambas versiones a 0/250/500/750/999 ms.
+ */
+@keyframes ldg-coffee-kf {
+  0% {
+    height: 0px;
+  }
+}
+
+/* ============ EatLoading ============ */
+
+.ldg-eat {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin: 75px;
+  display: inline-block;
+  vertical-align: middle;
+  border: 8px dotted var(--loader-color);
+  transition: all 1s ease;
+  animation: ldg-eat-kf 1s linear infinite;
+  border-bottom-width: 1px;
+  border-bottom-color: var(--loader-color);
+  border-left-width: 2px;
+  border-left-color: var(--loader-color);
+  border-top-width: 3px;
+  border-right-width: 4px;
+  border-top-color: var(--loader-color);
+}
+
+.ldg-eat__mouth {
+  position: absolute;
+  top: 45px;
+  left: 25px;
+  width: 0px;
+  height: 0px;
+  border-right: 12px solid transparent;
+  border-top: 12px solid var(--loader-color);
+  border-left: 12px solid var(--loader-color);
+  border-bottom: 12px solid var(--loader-color);
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+@keyframes ldg-eat-kf {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}

@@ -1,6 +1,6 @@
 import React, { Fragment, useContext } from "react";
 import { useLanguage } from "../../hooks/LanguageContext/useLanguageContext";
-import ScrollAnimation from "react-animate-on-scroll";
+import ScrollAnimation from "../../components/ScrollAnimation/ScrollAnimation";
 import "./CI_CD.css";
 import Deploy from "./Deploy/Deploy";
 import Repositorio from "./Repositorio/Repositorio";
