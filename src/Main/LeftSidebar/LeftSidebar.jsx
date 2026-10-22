@@ -21,7 +21,7 @@ const LeftSidebar = () => {
           title="Benemérita Universidad Autónoma de Aguascalientes"
           className="d-inline-block f5 rounded-2 text-white bg-green py-1 px-2 mb-3"
         >
-          Student
+          Professional
         </span>
         <div className="f4 mb-6">
           <ContactComponent
